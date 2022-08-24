@@ -50,19 +50,11 @@ let displayClientDropDown = () => {
     select_all_label2.setAttribute('for', 'without-client');
     select_all_label2.textContent = 'Without Client';
 
-    let client_input3 = createElem('input');
-    client_input3.setAttribute('id', 'abc');
-    client_input3.type = 'checkbox';
-
-    let select_all_label3 = createElem('label');
-    select_all_label3.setAttribute('for', 'abc');
-    select_all_label3.textContent = 'abc.com';
-
     status_select.append(opt1, opt2, opt3);
 
     status_div.append(show_project_status, status_select);
 
-    div.append(search, status_div, client_input1, select_all_label1, client_input2, select_all_label2, client_input3, select_all_label3);
+    div.append(search, status_div, client_input1, select_all_label1, client_input2, select_all_label2);
     catchElem('.cl-1').append(div);
 };
 
@@ -242,6 +234,7 @@ let addNewProject = async () => {
 
     catchElem('#project-name').value = '';
     catchElem('#client-name').value = '';
+    getProjectData()
 };
 
 let prj_content = catchElem('#project-details > div:nth-child(2) > table > tbody');
@@ -261,11 +254,16 @@ let getProjectData = async () => {
 
 let DisplayProjcetList = (data) => {
 
+    console.log(data);
+
     prj_content.innerHTML = '';
 
     data.forEach((e) => {
 
-        let tr = createElem('tr');
+        let tr_elem = createElem('tr');
+        tr_elem.onclick = () => {
+            saveProjData(e);
+        }
 
         let p_name = createElem('td');
         p_name.textContent = e.project_name;
@@ -285,14 +283,15 @@ let DisplayProjcetList = (data) => {
         let access_name = createElem('td');
         access_name.textContent = 'Public';
 
-        tr.append(p_name, c_name, track_name, amt_name, prog_name, access_name);
-
-        prj_content.append(tr);
+        tr_elem.append(p_name, c_name, track_name, amt_name, prog_name, access_name);
+        prj_content.append(tr_elem);
 
     });
+};
+
+let saveProjData = (e) => {
+    localStorage.setItem('project-details', JSON.stringify(e));
+    window.location.href = 'projectdet.html';
 }
-
-
-prj_content.addEventListener('click', DisplayProjcetList);
 
 
