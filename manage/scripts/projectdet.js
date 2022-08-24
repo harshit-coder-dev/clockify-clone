@@ -94,7 +94,9 @@ let showTasks = () => {
         task_td1.textContent = e.task;
 
         let task_td2 = createElem('td');
-        task_td2.textContent = 'user';
+        prj_data.forEach((e) => {
+            task_td2.textContent = e.client_name;
+        })
 
         let rem_btn = createElem('button');
         rem_btn.textContent = 'Delete';
