@@ -13,6 +13,7 @@
 #content-project>div:first-child {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 #content-project>div:first-child>h1 {
@@ -26,6 +27,7 @@
     background-color: #03a9f4;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 #component-2-project {
