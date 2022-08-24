@@ -244,6 +244,55 @@ let addNewProject = async () => {
     catchElem('#client-name').value = '';
 };
 
+let prj_content = catchElem('#project-details > div:nth-child(2) > table > tbody');
 
+window.addEventListener('load', () => {
+    getProjectData();
+})
+
+let getProjectData = async () => {
+
+    let res = await fetch('https://pacific-citadel-99633.herokuapp.com/api/clockify-projects');
+
+    res = await res.json();
+    console.log(res);
+    DisplayProjcetList(res);
+}
+
+let DisplayProjcetList = (data) => {
+
+    prj_content.innerHTML = '';
+
+    data.forEach((e) => {
+
+        let tr = createElem('tr');
+
+        let p_name = createElem('td');
+        p_name.textContent = e.project_name;
+
+        let c_name = createElem('td');
+        c_name.textContent = e.client_name;
+
+        let track_name = createElem('td');
+        track_name.textContent = '0.0h';
+
+        let amt_name = createElem('td');
+        amt_name.textContent = '0.0USD';
+
+        let prog_name = createElem('td');
+        prog_name.textContent = '-';
+
+        let access_name = createElem('td');
+        access_name.textContent = 'Public';
+
+        tr.append(p_name, c_name, track_name, amt_name, prog_name, access_name);
+
+        prj_content.append(tr);
+
+    });
+}
+
+
+prj_content.addEventListener('click', DisplayProjcetList);
 
 
