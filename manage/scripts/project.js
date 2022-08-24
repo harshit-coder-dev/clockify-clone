@@ -290,8 +290,11 @@ let DisplayProjcetList = (data) => {
 };
 
 let saveProjData = (e) => {
-    localStorage.setItem('project-details', JSON.stringify(e));
+    let data = [];
+    data.push(e);
+    localStorage.setItem('project-details', JSON.stringify(data));
     window.location.href = 'projectdet.html';
 }
+
 
 

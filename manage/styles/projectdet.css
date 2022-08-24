@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content {
+    width: 95%;
+    margin: auto;
+}
+
+#component-1 {
+    margin: 20px 0 40px 0;
+}
+
+#component-1>a {
+    text-decoration: none;
+    margin: 0 0 10px 0;
+    color: #03a9f4;
+}
+
+#component-1>a:hover {
+    text-decoration: underline;
+}
+
+#component-1>h1 {
+    font-weight: 500;
+    color: #666666;
+}
+
+#component-1>p {
+    color: #666666;
+}
+
+.component-tabs>button {
+    padding: 0 15px 0 15px;
+    height: 43px;
+    background-color: transparent;
+    border: 0.5px solid gainsboro;
+    cursor: pointer;
+}
+
+.component-tabs>button:hover {
+    background-color: gainsboro;
+}
+
+.component-tabs-data {
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5px 20px 5px 20px;
+    margin: 20px 0 0 0;
+}
+
+.div-controls {
+    height: 40px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-controls>div:first-child {
+    height: 40px;
+}
+
+.div-controls>div:first-child>select {
+    height: 40px;
+    cursor: pointer;
+    margin: 0 20px 0 0;
+    border: 00.5px solid gainsboro;
+}
+
+.div-controls>div:first-child>input {
+    height: 40px;
+    width: 245px;
+    margin: 0 20px 0 0;
+    padding-left: 10px;
+    border: 00.5px solid gainsboro;
+}
+
+.div-controls>div:nth-child(2) {
+    height: 40px;
+}
+
+.div-controls>div:nth-child(2)>input {
+    height: 40px;
+    width: 160px;
+    margin: 0 20px 0 0;
+    padding-left: 10px;
+    border: 00.5px solid gainsboro;
+}
+
+.div-controls>div:nth-child(2)>button {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    color: white;
+    background-color: #03a9f4;
+    border: none;
+    outline: none;
+}
+
+.component-tabs-data>div:nth-child(2)>table {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: 0.5px solid gainsboro;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>th {
+    text-align: left;
+    font-weight: 400;
+    color: #666666;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>th:nth-child(2) {
+    width: 50%;
+}
+
+.div-controls+div>div {
+    width: 100%;
+    height: 40px;
+    color: #666666;
+    background-color: #e4eaee;
+    padding: 8px 0 0 20px;
+}
