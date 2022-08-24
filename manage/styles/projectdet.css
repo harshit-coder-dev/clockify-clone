@@ -112,10 +112,33 @@
     text-align: left;
     font-weight: 400;
     color: #666666;
+    height: 40px;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>td {
+    height: 40px;
 }
 
 .component-tabs-data>div:nth-child(2)>table>tr>th:nth-child(2) {
     width: 50%;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>td:nth-child(1) {
+    width: 40%;
+    /* text-decoration: line-through; */
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>td:nth-child(2) {
+    width: 40%;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>button {
+    background-color: transparent;
+    border: 0.5px solid gainsboro;
+    color: #03a9f4;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 5px;
 }
 
 .div-controls+div>div {
