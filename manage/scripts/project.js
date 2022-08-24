@@ -108,8 +108,10 @@ let displayAcceessUsers = () => {
     show_users.textContent = 'USERS';
 
     user_select.append(opt1, opt2, opt3);
+
     user_div.append(show_user_status, user_select);
-    div.append(search, user_div, user_select);
+
+    div.append(search, user_div, user_input1, select_all_u_label1);
     catchElem('.cl-2').append(div);
 };
 

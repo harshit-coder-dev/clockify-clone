@@ -28,7 +28,146 @@
     border: none;
 }
 
+#component-2-project {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    border: 0.5px solid gainsboro;
+    padding-top: 10px;
+}
+
+#component-2-project>div:nth-child(2) {
+    width: auto;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#aaa {
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+#aaa>option {
+    width: auto;
+}
+
 .client-list {
     border: none;
     background-color: transparent;
+    width: 100px;
+    cursor: pointer;
+}
+
+.cl-1 {
+    width: 150px;
+}
+
+.cl-1>div {
+    border: 0.5px solid gainsboro;
+}
+
+.cl-1>div>div {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.cl-1>div>div:hover {
+    background-color: #e4eaee;
+}
+
+.cl-1>div>input {
+    display: list-item;
+}
+
+.cl-1>div>div>select {
+    border: none;
+    outline: none;
+}
+
+.cl-1>div>div>input:hover {
+    background-color: #e4eaee;
+}
+
+#component-2-project>div:nth-child(4) {
+    width: 150px;
+}
+
+.access-user {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cl-2>div {
+    border: 0.5px solid gainsboro;
+}
+
+.cl-2>div>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cl-2>div>div>select {
+    border: none;
+    outline: none;
+}
+
+#component-2-project>div:nth-child(5) {
+    width: 150px;
+}
+
+.billing {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cl-3 {
+    width: 100%;
+}
+
+.cl-3>div {
+    border: 0.5px solid gainsboro;
+}
+
+.cl-3>div>input {
+    display: list-item;
+}
+
+#component-2-project>div:nth-child(6) {
+    width: 300px;
+}
+
+#prj-name {
+    width: 98%;
+    height: 30px;
+    background-color: transparent;
+    padding-left: 15px;
+    border: 0.1px solid gainsboro;
+    outline: none;
+}
+
+.apply-filter {
+    background-color: white;
+    color: #03a9f4;
+    border: 0.5px solid gainsboro;
+    outline: none;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.apply-filter:hover {
+    background-color: #03a9f4;
+    color: white;
 }
