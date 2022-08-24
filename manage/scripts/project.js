@@ -34,21 +34,83 @@ let displayClientDropDown = () => {
     opt3.value = 'all';
     opt3.textContent = 'All';
 
-    let client_input = createElem('input');
-    client_input.setAttribute('id', 'select-all');
-    client_input.type = 'checkbox';
+    let client_input1 = createElem('input');
+    client_input1.setAttribute('id', 'select-all');
+    client_input1.type = 'checkbox';
 
-    let select_all_label = createElem('label');
-    let x = 'Select All';
-    catchElem('#select-all').htmlFor = x;
-    select_all_label.textContent = x;
+    let select_all_label1 = createElem('label');
+    select_all_label1.setAttribute('for', 'select-all');
+    select_all_label1.textContent = 'Select  All';
+
+    let client_input2 = createElem('input');
+    client_input2.setAttribute('id', 'without-client');
+    client_input2.type = 'checkbox';
+
+    let select_all_label2 = createElem('label');
+    select_all_label2.setAttribute('for', 'without-client');
+    select_all_label2.textContent = 'Without Client';
+
+    let client_input3 = createElem('input');
+    client_input3.setAttribute('id', 'abc');
+    client_input3.type = 'checkbox';
+
+    let select_all_label3 = createElem('label');
+    select_all_label3.setAttribute('for', 'abc');
+    select_all_label3.textContent = 'abc.com';
 
     status_select.append(opt1, opt2, opt3);
 
     status_div.append(show_project_status, status_select);
 
-    div.append(search, status_div, client_input);
+    div.append(search, status_div, client_input1, select_all_label1, client_input2, select_all_label2, client_input3, select_all_label3);
     catchElem('.cl-1').append(div);
 };
 
 catchElem('.client-list').addEventListener('click', displayClientDropDown);
+
+let access_list = catchElem('.access-user');
+
+let displayAcceessUsers = () => {
+
+    catchElem('.cl-2').innerHTML = '';
+
+    let div = createElem('div');
+    let search = createElem('input');
+    search.placeholder = 'Find Member or group';
+
+    let user_div = createElem('div');
+
+    let show_user_status = createElem('p');
+    show_user_status.textContent = 'SHOW';
+
+    let user_select = createElem('select');
+    let opt1 = createElem('option');
+    opt1.value = 'active';
+    opt1.textContent = 'Active';
+
+    let opt2 = createElem('option');
+    opt2.value = 'archived';
+    opt2.textContent = 'Inactive';
+
+    let opt3 = createElem('option');
+    opt3.value = 'all';
+    opt3.textContent = 'All';
+
+    let user_input1 = createElem('input');
+    user_input1.setAttribute('id', 'select-all_user');
+    user_input1.type = 'checkbox';
+
+    let select_all_u_label1 = createElem('label');
+    select_all_u_label1.setAttribute('for', 'select-all_user');
+    select_all_u_label1.textContent = 'Select  All';
+
+    let show_users = createElem('p');
+    show_users.textContent = 'USERS';
+
+    user_select.append(opt1, opt2, opt3);
+    user_div.append(show_user_status, user_select);
+    div.append(search, user_div, user_select);
+    catchElem('.cl-2').append(div);
+}
+
+catchElem('.access-user').addEventListener('click', displayAcceessUsers);
