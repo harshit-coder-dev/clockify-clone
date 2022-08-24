@@ -176,21 +176,26 @@ let openModal = () => {
     let new_div = createElem('div');
 
     let pro_name = createElem('input');
-    pro_name.type = 'search';
+    pro_name.type = 'text';
+    pro_name.setAttribute('id', 'project-name');
     pro_name.placeholder = 'Enter Project Name';
 
     let client_name = createElem('input');
-    client_name.type = 'search';
+    client_name.type = 'text';
+    client_name.setAttribute('id', 'client-name');
     client_name.placeholder = 'Enter Client Name';
 
     new_div.append(pro_name, client_name);
 
     let submit_div = createElem('div');
-    submit_div.setAttribute('class','submit-div');
+    submit_div.setAttribute('class', 'submit-div');
 
     let create_btn = createElem('button');
     create_btn.setAttribute('class', 'crt-new-prj');
     create_btn.textContent = 'CREATE';
+    create_btn.addEventListener('click', () => {
+        addNewProject();
+    });
 
     let close_p_btn = createElem('button');
     close_p_btn.setAttribute('class', 'cls-new-prj');
@@ -212,3 +217,33 @@ catchElem('#content-project > div:nth-child(1) > button').addEventListener('clic
 let closeModal = () => {
     modal.style.display = 'none';
 }
+
+let addNewProject = async () => {
+
+    let project_data =
+    {
+        project_name: catchElem('#project-name').value,
+        client_name: catchElem('#client-name').value,
+        project_id: Date.now()
+    };
+
+    let res = await fetch('https://pacific-citadel-99633.herokuapp.com/api/clockify-projects',
+        {
+            method: 'POST',
+            body: JSON.stringify(project_data),
+            headers:
+            {
+                'Content-Type': 'application/json'
+            }
+        });
+
+    res = await res.json();
+    console.log(res);
+
+    catchElem('#project-name').value = '';
+    catchElem('#client-name').value = '';
+};
+
+
+
+
