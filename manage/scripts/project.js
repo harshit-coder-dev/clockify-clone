@@ -146,3 +146,69 @@ let displayBillingDiv = () => {
 };
 
 catchElem('.billing').addEventListener('click', displayBillingDiv);
+
+let modal = catchElem('.modal');
+
+let openModal = () => {
+
+    modal.innerHTML = '';
+    modal.style.display = 'block';
+
+    let modal_cont = createElem('div');
+    modal_cont.setAttribute('class', 'modal-content');
+
+    let detail_div = createElem('div');
+    detail_div.setAttribute('class', 'crt-1')
+
+    let new_prj = createElem('p');
+    new_prj.textContent = 'Create New Project';
+
+    let close_btn = createElem('p');
+    close_btn.textContent = 'X';
+    close_btn.setAttribute('class', 'close-modal')
+    close_btn.style.cursor = 'pointer';
+    close_btn.addEventListener('click', () => {
+        closeModal();
+    });
+
+    detail_div.append(new_prj, close_btn);
+
+    let new_div = createElem('div');
+
+    let pro_name = createElem('input');
+    pro_name.type = 'search';
+    pro_name.placeholder = 'Enter Project Name';
+
+    let client_name = createElem('input');
+    client_name.type = 'search';
+    client_name.placeholder = 'Enter Client Name';
+
+    new_div.append(pro_name, client_name);
+
+    let submit_div = createElem('div');
+    submit_div.setAttribute('class','submit-div');
+
+    let create_btn = createElem('button');
+    create_btn.setAttribute('class', 'crt-new-prj');
+    create_btn.textContent = 'CREATE';
+
+    let close_p_btn = createElem('button');
+    close_p_btn.setAttribute('class', 'cls-new-prj');
+    close_p_btn.textContent = 'CLOSE';
+    close_p_btn.addEventListener('click', () => {
+        closeModal();
+    })
+
+    submit_div.append(close_p_btn, create_btn);
+
+    modal_cont.append(detail_div, new_div, submit_div);
+
+    modal.append(modal_cont);
+
+};
+
+catchElem('#content-project > div:nth-child(1) > button').addEventListener('click', openModal);
+
+let closeModal = () => {
+    modal.style.display = 'none';
+}
