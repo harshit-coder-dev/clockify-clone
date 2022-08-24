@@ -111,6 +111,36 @@ let displayAcceessUsers = () => {
     user_div.append(show_user_status, user_select);
     div.append(search, user_div, user_select);
     catchElem('.cl-2').append(div);
-}
+};
 
 catchElem('.access-user').addEventListener('click', displayAcceessUsers);
+
+let displayBillingDiv = () => {
+
+    catchElem('.cl-3').innerHTML = '';
+
+    let div = createElem('div');
+
+    let b_input = createElem('input');
+    b_input.setAttribute('id', 'billable');
+    b_input.type = 'checkbox';
+
+    let b_label = createElem('label');
+    b_label.setAttribute('for', 'billable');
+    b_label.textContent = 'Billable';
+
+    let non_b_input = createElem('input');
+    non_b_input.setAttribute('id', 'nonbillable');
+    non_b_input.type = 'checkbox';
+
+    let non_b_label = createElem('label');
+    non_b_label.setAttribute('for', 'nonbillable');
+    non_b_label.textContent = 'Non - Billable';
+
+    div.append(b_input, b_label, non_b_input, non_b_label);
+
+    catchElem('.cl-3').append(div);
+
+};
+
+catchElem('.billing').addEventListener('click', displayBillingDiv);
