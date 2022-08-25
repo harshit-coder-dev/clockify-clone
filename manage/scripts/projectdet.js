@@ -9,13 +9,17 @@ let createElem = (val) => {
     return document.createElement(val);
 };
 
-for (let i of prj_data) {
-    catchElem('#component-1 > h1').textContent = i.project_name;
-    catchElem('#component-1 > p').textContent = i.client_name;
-}
+let appendNames = () => {
+
+    prj_data.forEach((e) => {
+        catchElem('#component-1 > h1').textContent = e.project_name;
+        catchElem('#component-1 > p').textContent = e.client_name;
+    });
+};
 
 window.onload = () => {
     showTasks();
+    appendNames();
 }
 
 let component_tabs = catchElem('.component-tabs-data');
@@ -219,6 +223,7 @@ let showAccess = () => {
     let acc_tb_tr = createElem('tr');
 
     let acc_td = createElem('td');
+
     prj_data.forEach((e) => {
         acc_td.textContent = e.client_name;
     })
@@ -268,3 +273,83 @@ let showNote = () => {
 }
 
 catchElem('.component-tabs > button:nth-child(3)').addEventListener('click', showNote);
+
+let getData = async () => {
+
+    let res = await fetch('https://pacific-citadel-99633.herokuapp.com/api/clockify-projects');
+
+    res = await res.json();
+
+    console.log(res);
+}
+
+let showPrjSettings = () => {
+
+    component_tabs.innerHTML = '';
+
+    let pjs_div = createElem('div');
+
+    let pj_name_div = createElem('div');
+
+    let pj_name = createElem('h2');
+    pj_name.textContent = 'Name';
+
+    let pj_change = createElem('input');
+    pj_change.type = 'text';
+    pj_change.setAttribute('id', 'chagne-prj-name');
+
+    pj_change.oninput = () => {
+        let update_pjname = pj_change.value;
+
+        for (let i in prj_data) {
+            prj_data[i].project_name = update_pjname;
+        }
+
+        localStorage.setItem('project-details', JSON.stringify(prj_data));
+    }
+
+    pj_name_div.append(pj_name, pj_change);
+
+    pjs_div.append(pj_name_div);
+
+    let pj_client_div = createElem('div');
+
+    let pj_cl_name = createElem('h2');
+    pj_cl_name.textContent = 'Client';
+
+    let pj_change_cl = createElem('input');
+    pj_change_cl.type = 'text';
+    pj_change_cl.setAttribute('id', 'chagne-prj-name');
+
+    pj_change_cl.oninput = () => {
+        let update_pjname_cl = pj_change_cl.value;
+
+        for (let i in prj_data) {
+            prj_data[i].client_name = update_pjname_cl;
+        }
+
+        localStorage.setItem('project-details', JSON.stringify(prj_data));
+    }
+
+    pj_client_div.append(pj_cl_name, pj_change_cl);
+
+    let bill_div = createElem('div');
+
+    let bill_h2 = createElem('h2');
+    bill_h2.textContent = 'Project billable rate'
+
+    let bill_p = createElem('p');
+    bill_p.textContent = 'Billable rate used for calculating billable amount for this project.';
+
+    
+
+    pjs_div.append(pj_name_div, pj_client_div);
+
+    component_tabs.append(pjs_div);
+}
+
+showPrjSettings();
+
+console.log(prj_data);
+
+catchElem('.component-tabs > button:nth-child(4)').addEventListener('click', showPrjSettings);
