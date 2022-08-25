@@ -240,3 +240,7 @@ let showAccess = () => {
 };
 
 catchElem('.component-tabs > button:nth-child(2)').addEventListener('click', showAccess);
+
+
+
+catchElem('.component-tabs > button:nth-child(3)').addEventListener('click', showNote);
