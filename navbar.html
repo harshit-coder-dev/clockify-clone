@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/0b4cec7029.js" crossorigin="anonymous"></script>
+    <title>navbar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            *padding: 0;
+            margin: 0;
+            font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(41, 40, 40);
+        }
+
+        #navbar {
+            display: flex;
+            border-bottom: 1px solid gray;
+            justify-content: space-between;
+            padding: 0 13px 0 13px;
+            border-left: 4px solid #58c6f8;
+        }
+
+        #logo-div {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #logo {
+            margin-top: 10px;
+        }
+
+        #logo>img {
+            width: 100px;
+            height: 35;
+        }
+
+        .fa-bars {
+            font-size: 33px;
+            color: gray;
+        }
+
+        .vertical_dotted_line {
+            border-right: 1px dotted gray;
+            height: 30px;
+        }
+
+        #upgrade {
+            border: 2px solid #58c6f8;
+            padding: 5px;
+            color: #58c6f8;
+            font-weight: 500;
+        }
+
+        #name-short {
+            border-radius: 50%;
+            background-color: #ffc107;
+            padding: 10px;
+            color: white;
+        }
+
+        #sidebar {
+            display: flex;
+            width: 220px;
+            flex-direction: column;
+            border-left: 4px solid #58c6f8;
+            border-right: 1px solid gray;
+            background-color: white;
+            transition: width 0.3s linear;
+
+        }
+
+        .one-div-flex {
+            display: flex;
+            gap: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .one-div-flex:hover {
+            background-color: #bfd4dd;
+            transition: backgrouond-color 0.5s linear;
+        }
+
+        .one-div-flex:hover>div>.fa-grip-vertical {
+            color: #3c3837;
+        }
+
+        p {
+            margin-left: 18px;
+            margin-top: 10px;
+            margin-bottom: 4px;
+            color: gray;
+        }
+
+        .fa-grip-vertical {
+            color: #b1adac;
+            /* font-size: x-small; */
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .hide-show:hover+.hide {
+            display: block;
+        }
+
+        #box {
+            display: flex;
+            background-color: #f2f6f8;
+
+        }
+
+        #main-content {
+            width: 90%;
+            height: 100vh;
+
+        }
+
+        .hide1 {
+            visibility: hidden;
+        }
+
+        .rotate .fa-angle-down {
+            transform: rotate(180deg);
+        }
+
+        .gray {
+            color: #c5c5c5;
+        }
+
+        #dropdown {
+            position: absolute;
+            right: 320px;
+            left: auto;
+            z-index: 1000;
+            width: 300px;
+            box-shadow: 0 5px 10px;
+            /* display:none; */
+            /* border:1px solid red; */
+            text-align: left;
+            background-color: white;
+            
+        }
+
+        #flex1 {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="logo-div">
+            <div id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+            <div id="logo">
+                <img src="https://clockify.me/assets/images/brand-assets/clockify-logo.png" alt="" />
+            </div>
+        </div>
+        <div id="info">
+            <div id="user-name">
+                Manoj Kumar's workspace <i class="fa-solid fa-sort-down"></i>
+                <div id="dropdown">
+                    <div id="flex1">
+                        <div>WORKSPACES</div>
+                        <div>Manage</div>
+                    </div>
+                    <div id="flex1">
+                        <div>Manoj kumar's workspace</div>
+                        <div>Active</div>
+                    </div>
+                </div>
+            </div>
+            <div id="upgrade">UPGRADE</div>
+            <div class="vertical_dotted_line"></div>
+            <div id="question">
+                <img src="https://app.clockify.me/assets/nav-icons/help.svg" alt="" />
+            </div>
+            <div class="vertical_dotted_line"></div>
+
+            <div id="notification">
+                <img src="https://app.clockify.me/assets/nav-icons/notification.svg" alt="" />
+            </div>
+            <div class="vertical_dotted_line"></div>
+
+            <div id="name-short">MK</div>
+        </div>
+    </div>
+
+    <div id="box">
+        <div id="sidebar">
+            <div class="one-div-flex">
+                <div class="icon"><i class="fa-regular fa-clock"></i></div>
+                <div class="hide-show"> TIME TRACKER</div>
+                <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
+            </div>
+            <div class="one-div-flex">
+                <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/calendar.svg" alt=""></i></div>
+                <div class="hide-show"> CALENDER</div>
+                <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
+            </div>
+            <p class="hide-show">ANALYZE</p>
+            <div class="one-div-flex">
+                <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/dashboard.svg" alt=""></div>
+                <div class="hide-show"> DASHBOARD</div>
+                <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
+            </div>
+            <div class="one-div-flex">
+                <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/reports.svg" alt=""></i></div>
+                <div class="hide-show"> REPORTS</div>
+                <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
+            </div>
+            <p class="hide-show">MANAGE</p>
+
+            <div class="one-div-flex">
+                <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/projects.svg" alt=""></div>
+                <div class="hide-show"> PROJECTS</div>
+                <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
+            </div>
+            <div class="one-div-flex">
+                <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/teams.svg" alt=""></i></div>
+                <div class="hide-show"> TEAM</div>
+                <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
+            </div>
+            <div class="one-div-flex">
+                <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/clients.svg" alt="">
+                    </i></div>
+                <div class="hide-show">CLIENTS</div>
+                <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
+            </div>
+            <div class="one-div-flex">
+                <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/tags.svg" alt=""></i></div>
+                <div class="hide-show"> TAGS</div>
+                <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
+            </div>
+
+
+            <div>
+
+                <div class="one-div-flex " id="one">
+                    <div class="icon"><i class="fa-solid fa-angle-down gray"></i></div>
+                    <div class="hide-show gray" id="show"> Show More</div>
+                </div>
+
+
+                <div id="more" class="hide1">
+
+                    <div class="one-div-flex">
+                        <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/timesheet.svg" alt=""></i>
+                        </div>
+                        <div class="hide-show">TIMESHEET</div>
+                    </div>
+
+                    <div class="one-div-flex">
+                        <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/Kiosk.svg" alt=""></i>
+                        </div>
+                        <div class="hide-show "> kIOSKS</div>
+                    </div>
+
+                    <div class="one-div-flex">
+                        <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/scheduling.svg" alt=""></i>
+                        </div>
+                        <div class="hide-show gray">SCHEDULE</div>
+                    </div>
+
+                    <div class="one-div-flex">
+                        <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/expenses.svg" alt=""></i>
+                        </div>
+                        <div class="hide-show gray">EXPENSES</div>
+                    </div>
+
+                    <div class="one-div-flex">
+                        <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/timeOff.svg" alt=""></i>
+                        </div>
+                        <div class="hide-show gray">TIME OFF</div>
+                    </div>
+
+                    <div class="one-div-flex">
+                        <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/activity.svg" alt=""></i>
+                        </div>
+                        <div class="hide-show gray">ACTIVITY</div>
+                    </div>
+
+                    <div class="one-div-flex">
+                        <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/approvals.svg" alt=""></i>
+                        </div>
+                        <div class="hide-show gray">APPROVALS</div>
+                    </div>
+
+                    <div class="one-div-flex">
+                        <div class="icon"><img style="color:#c5c5c5;"
+                                src="https://app.clockify.me/assets/nav-icons/invoices" alt=""></i></div>
+                        <div class="hide-show gray">INVOICES</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="main-content"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let sidebar = document.getElementById("sidebar");
+    var menu = document.getElementById("menu-icon");
+    menu.onclick = () => {
+        myFunction();
+    }
+    function myFunction() {
+        let x = document.getElementsByClassName("hide-show");
+        for (let i = 0; i < x.length; i++) {
+
+            if (x[i].style.display === "none") {
+                x[i].style.display = "block";
+                sidebar.style.width = "200px";
+
+            }
+            else {
+                x[i].style.display = "none";
+                sidebar.style.width = "50px";
+
+            }
+        }
+    }
+
+    const one = document.querySelector("#one");
+
+    one.addEventListener("click", () => {
+        let show = document.getElementById("show");
+        const hide = document.querySelector("#more")
+        hide.classList.toggle("hide1");
+        // console.log(show.innerText);
+        if (show.innerText == "Show More") {
+            show.innerText = "Show Less"
+            one.classList.toggle("rotate");
+
+        }
+        else {
+            show.innerText = "Show More";
+            one.classList.toggle("rotate");
+        }
+
+    })
+</script>
