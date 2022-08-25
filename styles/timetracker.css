@@ -1,0 +1,91 @@
+.addproject {
+    width: 79%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 16%;
+    left: 20%;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+      rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    padding-top: 20px;
+  }
+  .addproject input {
+    height: 60px;
+    width: 580px;
+    padding-left: 20px;
+    border: none;
+    font-size: medium;
+  }
+  .addproject input:hover {
+    border: 1px solid gray;
+    transition: all 0.6s;
+  }
+  .addproject .project {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    padding-top: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  .addproject p {
+    color: #03a9f4;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .addproject .tag {
+    width: 38px;
+    padding-top: 8px;
+    border: none;
+    margin-left: 20px;
+  }
+  .addproject .dollar p {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    font-weight: 500;
+    border: 1px solid black;
+    padding-top: 11px;
+    border: none;
+    color: rgb(153, 153, 153);
+    cursor: pointer;
+  }
+  .addproject .dollar {
+    margin-left: 50px;
+  }
+  .addproject .timer {
+    font-size: 28px;
+    width: 140px;
+    padding-top: 17px;
+    border: none;
+    display: flex;
+  }
+  .addproject .toggle {
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  .addproject .toggle.active {
+    transform: scale(0.9);
+  }
+  
+  .addproject .start {
+    padding-top: 8px;
+    border: none;
+  }
+  .addproject button:hover {
+    background: #065f8f;
+    color: white;
+  }
+  
+  .addproject button {
+    width: 80px;
+    height: 50px;
+    background: #03a9f4;
+    border: none;
+  }
+  .addproject .twologo {
+    padding-right: 40px;
+    padding-top: 17px;
+    border: none;
+  }
