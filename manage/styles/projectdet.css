@@ -202,3 +202,26 @@
     font-weight: 400;
     padding-left: 20px;
 }
+
+.note-div {
+    width: 550px;
+    height: 250px;
+    border: 0.5px solid gainsboro;
+    margin: 20px 0 20px 0;
+}
+
+#note-input {
+    height: 40%;
+    width: 540px;
+    outline: none;
+    border: none;
+    margin: 20px 0 0 0;
+    padding: 0 0 0 10px;
+    color: transparent;
+}
+
+.note-div>p {
+    height: 40%;
+    font-size: smaller;
+    padding: 0 0 0 10px;
+}

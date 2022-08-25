@@ -241,6 +241,30 @@ let showAccess = () => {
 
 catchElem('.component-tabs > button:nth-child(2)').addEventListener('click', showAccess);
 
+let note_context = JSON.parse(localStorage.getItem('note'));
 
+let showNote = () => {
+
+    component_tabs.innerHTML = '';
+
+    let note_div = createElem('div');
+    note_div.setAttribute('class', 'note-div');
+
+    let note_input = createElem('input');
+    note_input.type = 'text';
+    note_input.setAttribute('id', 'note-input');
+    note_input.oninput = () => {
+
+        localStorage.setItem('note', JSON.stringify(note_input.value));
+
+    }
+
+    let note_p = createElem('p');
+    note_p.textContent = note_context;
+
+    note_div.append(note_input, note_p);
+
+    component_tabs.append(note_div);
+}
 
 catchElem('.component-tabs > button:nth-child(3)').addEventListener('click', showNote);
