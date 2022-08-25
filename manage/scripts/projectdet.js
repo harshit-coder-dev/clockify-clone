@@ -288,6 +288,7 @@ let showPrjSettings = () => {
     component_tabs.innerHTML = '';
 
     let pjs_div = createElem('div');
+    pjs_div.setAttribute('class', 'prj-settings')
 
     let pj_name_div = createElem('div');
 
@@ -333,23 +334,52 @@ let showPrjSettings = () => {
 
     pj_client_div.append(pj_cl_name, pj_change_cl);
 
-    let bill_div = createElem('div');
+    let prj_div = createElem('div');
 
-    let bill_h2 = createElem('h2');
-    bill_h2.textContent = 'Project billable rate'
+    let prj_h2 = createElem('h2');
+    prj_h2.textContent = 'Project estimate'
 
-    let bill_p = createElem('p');
-    bill_p.textContent = 'Billable rate used for calculating billable amount for this project.';
+    let prj_p = createElem('p');
+    prj_p.textContent = 'Choose how you wish to track project progress (time or fixed fee budget).';
 
-    
+    let prj_sel = createElem('select');
+    prj_sel.setAttribute('id', 'prj-sel');
 
-    pjs_div.append(pj_name_div, pj_client_div);
+    let prj_opt1 = createElem('option');
+    prj_opt1.value = 'no-estimate';
+    prj_opt1.textContent = 'No-estimate';
+
+    let prj_opt2 = createElem('option');
+    prj_opt2.value = 'time-estimate';
+    prj_opt2.textContent = 'Time estimate'
+
+    prj_sel.append(prj_opt1, prj_opt2);
+
+    prj_div.append(prj_h2, prj_p, prj_sel);
+
+    let pro_bud = createElem('div')
+
+    let pro_div_1 = createElem('div');
+    pro_div_1.textContent = 'PRO feature';
+
+    let pro_div_2 = createElem('div');
+
+    let pro_btn = createElem('button');
+    pro_btn.textContent = 'Upgrade';
+    pro_btn.addEventListener('click', () => {
+        window.location.href = '';
+    });
+
+    pro_div_2.append(pro_btn);
+
+    pro_bud.append(pro_div_1, pro_div_2);
+
+    pjs_div.append(pj_name_div, pj_client_div, prj_div, pro_bud);
 
     component_tabs.append(pjs_div);
-}
+
+};
 
 showPrjSettings();
-
-console.log(prj_data);
 
 catchElem('.component-tabs > button:nth-child(4)').addEventListener('click', showPrjSettings);
