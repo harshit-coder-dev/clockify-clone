@@ -150,3 +150,93 @@ let removeTask = (e) => {
     showTasks(tasks_array);
 }
 
+let showAccess = () => {
+
+    component_tabs.innerHTML = '';
+
+    let acc_div = createElem('div');
+    acc_div.setAttribute('class', 'access-div');
+
+    let acc_div_1 = createElem('div');
+
+    let acc_text_h2 = createElem('h2');
+    acc_text_h2.textContent = 'Visibility';
+
+    let vis_who_1 = createElem('input');
+    vis_who_1.type = 'radio';
+    vis_who_1.value = 'private';
+    vis_who_1.name = 'private';
+    vis_who_1.checked = true;
+    vis_who_1.setAttribute('id', 'acc-private');
+
+    let vis_who_1_label = createElem('label');
+    vis_who_1_label.setAttribute('for', 'acc-private');
+    vis_who_1_label.textContent = 'Private';
+
+    let vis_who_2 = createElem('input');
+    vis_who_2.type = 'radio';
+    vis_who_2.value = 'public';
+    vis_who_2.name = 'public';
+    vis_who_2.checked = false;
+    vis_who_2.setAttribute('id', 'acc-public');
+
+    let vis_who_2_label = createElem('label');
+    vis_who_2_label.setAttribute('for', 'acc-public');
+    vis_who_2_label.textContent = 'Public';
+
+    let acc_text_p = createElem('p');
+    acc_text_p.setAttribute('class', 'acc-p-text');
+    acc_text_p.textContent = 'Only people you add to the project can track time on it';
+
+    if (vis_who_2.checked === true) {
+        vis_who_1.checked = false;
+        acc_text_p.textContent = 'Everyone can track time on public projects.'
+    }
+
+    acc_div_1.append(acc_text_h2, acc_text_p, vis_who_1, vis_who_1_label, vis_who_2, vis_who_2_label);
+
+    let acc_div_2 = createElem('div');
+
+    let acc_div_2_p = createElem('p');
+    acc_div_2_p.textContent = 'Users';
+
+    acc_div_2.append(acc_div_2_p);
+
+    let acc_u_table = createElem('table');
+
+    let acc_tr = createElem('tr');
+    let acc_th = createElem('th');
+    acc_th.textContent = 'NAME';
+
+    let acc_th2 = createElem('th');
+    acc_th2.textContent = 'BILLABLE RATE'
+
+    let acc_th3 = createElem('th');
+    acc_th3.textContent = 'OWNER';
+
+    acc_tr.append(acc_th, acc_th2, acc_th3);
+
+    let acc_tb_tr = createElem('tr');
+
+    let acc_td = createElem('td');
+    prj_data.forEach((e) => {
+        acc_td.textContent = e.client_name;
+    })
+
+    let acc_td2 = createElem('td');
+    acc_td2.textContent = 'Change';
+
+    let acc_td3 = createElem('td');
+    acc_td3.textContent = 'Owner';
+
+    acc_tb_tr.append(acc_td, acc_td2, acc_td3);
+
+    acc_u_table.append(acc_tr, acc_tb_tr);
+
+    acc_div.append(acc_div_1, acc_div_2, acc_u_table);
+
+    component_tabs.append(acc_div);
+
+};
+
+catchElem('.component-tabs > button:nth-child(2)').addEventListener('click', showAccess);
