@@ -167,12 +167,13 @@
 </body>
 </html>
 <script>
-    let login_api_link='http://localhost:3000/api/signup';
+    let login_api_link='https://nameless-earth-14050.herokuapp.com/api/signup';
 
     async function getdata(){
         let res = await fetch(login_api_link);
         let data = await res.json();
         console.log(data);
+        
         return data;
         
     }
@@ -187,7 +188,7 @@
             if(username==el.username && password==el.password){
                 toggle(el.id);
                 console.log(el.id);
-                window.location.href="home.html";
+                //window.location.href="home.html";
             }else{
                 console.log("NO")    
             }
@@ -196,12 +197,12 @@
 
     let toggle = async (id)=>{
         console.log(id);
-        let s = await fetch(`http://localhost:3000/api/signup/${id}`);
+        let s = await fetch(`https://nameless-earth-14050.herokuapp.com/api/signup/${id}`);
         s = await s.json();
         let a = {
             status:!s.status
         };
-        let res = await fetch(`http://localhost:3000/api/signup/${id}`,{
+        let res = await fetch(`https://nameless-earth-14050.herokuapp.com/api/signup/${id}`,{
             method:"PATCH",
             body:JSON.stringify(a),
             headers:{
