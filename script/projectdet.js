@@ -369,7 +369,7 @@ let showPrjSettings = () => {
     let pro_btn = createElem('button');
     pro_btn.textContent = 'Upgrade';
     pro_btn.addEventListener('click', () => {
-        window.location.href = '';
+        window.location.href = 'upgrad.html';
     });
 
     pro_div_2.append(pro_btn);

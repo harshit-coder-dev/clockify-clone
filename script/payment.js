@@ -171,7 +171,7 @@ let finishPayment = () => {
 donebtn.onclick = () => {
     donepopup.style.transition = "0.4s";
     donepopup.classList.remove("open-popup");
-    window.location.href = "index.html";
+    window.location.href = "project.html";
 }
 failedBtn.onclick = () => {
     failedpopup.style.transition = "0.4s";

@@ -102,13 +102,21 @@ check.addEventListener("change", () => {
 
 
 
-let clt=document.getElementById("clt");
-console.log(clt);
-clt.addEventListener("click",()=>{
-window.location.href="client.html"
-})
+// let clt=document.getElementById("clt");
+// console.log(clt);
+// clt.addEventListener("click",()=>{
+// window.location.href="client.html"
+// })
 
 
+///Append user data
+
+let login = localStorage.getItem("system");
+
+if(login == "online"){
+    let userData = JSON.parse(localStorage.getItem("signupKey"));
+
+}
 
 
 

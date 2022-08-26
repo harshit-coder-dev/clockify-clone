@@ -20,7 +20,7 @@ let navegabar = ()=>{
                     class="fa-solid fa-check"></i>Active</div>
         </div>
     </div>
-    <div id="upgrade"><a href="../upgrad.html">UPGRADE</a></div>
+    <div id="upgrade"><a href="upgrad.html">UPGRADE</a></div>
     <div class="vertical_dotted_line"></div>
     <div id="question">
         <img src="https://app.clockify.me/assets/nav-icons/help.svg" alt="" />
@@ -71,15 +71,15 @@ let navegabar = ()=>{
 let SideBar = ()=>{
     return `<div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/time-tracker.svg" alt=""></i></div>
-    <div class="hide-show">TIME TRACKER</div>
+    <div class="hide-show"><a href="">TIME TRACKER</a></div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/calendar.svg" alt=""></i></div>
-    <div class="hide-show"> CALENDER</div>
+    <div class="hide-show">CALENDER</div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
-<p class="hide-show gray">ANALYZE</p>
+<p class="hide-show gray marginLeft">ANALYZE</p>
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/dashboard.svg" alt=""></div>
     <div class="hide-show"> DASHBOARD</div>
@@ -90,11 +90,11 @@ let SideBar = ()=>{
     <div class="hide-show"> REPORTS</div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
-<p class="hide-show gray">MANAGE</p>
+<p class="hide-show gray marginLeft">MANAGE</p>
 
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/projects.svg" alt=""></div>
-    <div class="hide-show">PROJECTS</div>
+    <div class="hide-show"><a href="project.html">PROJECTS</a></div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
 <div class="one-div-flex">
@@ -105,12 +105,12 @@ let SideBar = ()=>{
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/clients.svg" alt="">
         </i></div>
-    <div class="hide-show" id="clt">CLIENTS</div>
+    <div class="hide-show" id="clt"><a href="client.html">CLIENTS</a></div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/tags.svg" alt=""></i></div>
-    <div class="hide-show"> TAGS</div>
+    <div class="hide-show"> <a href="tags.html">TAGS</a></div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
 

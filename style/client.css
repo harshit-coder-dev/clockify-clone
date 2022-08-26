@@ -16,6 +16,8 @@ body{
   }
   h2{
       color:gray;
+      font-size: 28px;
+      font-weight: 400;
   }
   #search {
     margin-top: 30px;
