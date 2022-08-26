@@ -1,8 +1,14 @@
+import { Navbar,Sidebar } from "../component/navt.js";
+
+document.getElementById("navbar").innerHTML=Navbar()
+let sidebar = document.getElementById("sidebar");
+sidebar.innerHTML=Sidebar()
+
 import app from "../component/client1.js"
+
 import display from "../component/client2.js"
 import popupHtml from "../component/popup.js"
 
-let sidebar = document.getElementById("sidebar");
 var menu = document.getElementById("menu-icon");
 menu.onclick = () => {
     myFunction();

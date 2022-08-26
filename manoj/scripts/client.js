@@ -16,7 +16,7 @@ add.addEventListener("click", () => {
 
 
 
-let display = ( clientArr,) => {
+function display ( clientArr){
     console.log(clientArr);
     let cont = document.getElementById("container");
 
