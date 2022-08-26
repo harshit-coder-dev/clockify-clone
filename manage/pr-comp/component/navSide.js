@@ -92,11 +92,13 @@ let SideBar = () => {
 </div>
 <p class="hide-show gray">MANAGE</p>
 
+<a href="./project.html">
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/projects.svg" alt=""></div>
     <div class="hide-show">PROJECTS</div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
+</a>
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/teams.svg" alt=""></i></div>
     <div class="hide-show">TEAM</div>
@@ -108,13 +110,13 @@ let SideBar = () => {
     <div class="hide-show" id="clt">CLIENTS</div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
+<a href="./tags.html">
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/tags.svg" alt=""></i></div>
     <div class="hide-show"> TAGS</div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
-
-
+</a>
 <div>
 
     <div class="one-div-flex " id="one">
