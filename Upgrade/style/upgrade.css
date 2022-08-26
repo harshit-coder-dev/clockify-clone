@@ -1,0 +1,195 @@
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+          Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #333;
+        text-align: left;
+        background-color: #f2f6f8;
+      }
+      #main{
+        width: 80%;
+        margin: auto;
+      }
+
+      #headTitel {
+        letter-spacing: -0.05rem;
+        margin-bottom: 0.7143rem;
+        font-size: 2.286rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      #headPara {
+        width: 75%;
+        color: #666;
+        margin: 0 auto 1rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-align: center;
+      }
+      #planbtn{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 42%;
+        margin: 2.8572rem auto 4.2858rem;
+        text-align: center
+      }
+      #planbtn>button{
+        border-color: #c6d2d9;
+    color: #666;
+    background: #ffffff;
+    font-weight: 400;
+    border: 1px solid #e4eaee;
+    font-size: 15px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      }
+      #planbtn>button:last-child{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      }
+      #green{
+        color: #fff;
+    background-color: #4caf50;
+    margin-left: 0.7143rem;
+    padding: 0.35715rem 0.7143rem;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    border-radius: 2px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      }
+      #planbox{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: auto;
+        background-color: white;  
+        margin-bottom: 1.4286rem;
+      }
+      #black{
+    border: 1px solid #C6D2D9;
+    border-radius: 2px;
+        border-top: 3px solid #3D4853;
+        width: 100%;
+        border-bottom: 4px solid #C6D2D9;
+        color: #3d4853
+      }
+      #black>button{
+        background-color: #3d4853;
+      }
+      #blue{
+    border: 1px solid #C6D2D9;
+    border-radius: 2px;
+        border-top: 3px solid #2f80ed;
+        width: 100%;
+        border-bottom: 4px solid #C6D2D9;
+
+      }
+      #blue>button{
+        background-color: #2f80ed;
+      }
+      #red{
+    border: 1px solid #C6D2D9;
+    border-radius: 2px;
+        border-top: 3px solid #eb5757;
+        width: 100%;
+        border-bottom: 4px solid #C6D2D9;
+        margin: -20px 0px;
+        background-color: white;  
+
+      }
+      #red>button{
+        background-color: #eb5757;
+      }
+      #purple{
+    border: 1px solid #C6D2D9;
+    border-left: 0;
+    border-radius: 2px;
+        border-top: 3px solid #9b51e0;
+        width: 100%;
+        border-bottom: 4px solid #C6D2D9;
+
+      }
+      #purple>button{
+        background-color: #9b51e0 ;
+      }
+      .admSeat{
+        text-align: center;
+        color: #3d4853;
+        font-size: 1rem;
+        font-family: inherit;
+    font-weight: 400;
+    line-height: 1.5;
+      }
+      .titlePrice{
+        text-align: center;
+        font-size: 1.714rem;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+      .upgradeBtn{
+        display: block;
+        margin: auto;
+    color: #fff;
+    text-transform: uppercase;
+    width: 80%;
+    border: 1px solid transparent;
+    padding: 0.608rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 2px;
+      }
+      
+      a{
+        cursor: pointer;
+        text-decoration: none;
+        background-color: transparent;
+        color: #fff;
+      }
+      ul{
+        line-height: 2rem;
+        padding: 0 1.4286rem;
+        list-style: none;
+        margin-top: 0;
+    margin-bottom: 1rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    color: 
+#a0a0a5;
+      }
+      .gray{
+        color: #718191;
+      }
+      #trstCom{
+        color: #999;
+        margin: 2.8572rem 0;
+        font-size: 1rem;
+        font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+      }
+      #trustImg{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        width: 80%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #trustImg>img{
+        width: 60%;
+      }
+      button{
+        cursor: pointer;
+      }
+    
