@@ -7,7 +7,8 @@
 
 .content {
     width: 95%;
-    margin: auto;
+    /* margin: auto; */
+    padding: 20px 0 0 20px;
 }
 
 #component-1 {

@@ -7,7 +7,8 @@
 
 .content {
     width: 95%;
-    margin: auto;
+    /* margin: auto; */
+    padding: 20px 0 0 20px;
 }
 
 #content-project>div:first-child {
@@ -202,6 +203,7 @@
     font-weight: 200;
     height: 40px;
     color: #999999;
+    padding: 0 0 0 15px;
 }
 
 #project-details>div:nth-child(2)>table>tbody {
@@ -209,7 +211,7 @@
 }
 
 #project-details>div:nth-child(2)>table>tbody>tr>td {
-    text-align: center;
+    padding: 0 0 0 15px;
     font-weight: 200;
     height: 50px;
     color: #666666;

@@ -18,8 +18,9 @@ let appendNames = () => {
 };
 
 window.onload = () => {
-    showTasks();
     appendNames();
+    showTasks();
+
 }
 
 let component_tabs = catchElem('.component-tabs-data');
