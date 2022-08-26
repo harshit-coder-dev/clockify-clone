@@ -9,6 +9,7 @@
         *{
             margin:0px;
             padding:0px;
+            font-family: sans-serif;
         }
         #avi_main{
             display:flex;
@@ -132,8 +133,8 @@
             </div>
             <div id="avi_login">
                     <h2>Log In</h2>
-                    <input type="text" placeholder="Enter Email" id="email">
-                    <input type="text" placeholder="Enter Password" id="pass">
+                    <input type="email" placeholder="Enter Email" id="email">
+                    <input type="password" placeholder="Enter Password" id="pass">
                     <span id="sp"><p><input type="checkbox">Stay Logged in</p><p><a href="#"  id="fp">Forget Password?</a></p></span>
                     <button id="log" onclick="login()">LOG IN</button>
                     <hr>
@@ -167,50 +168,30 @@
 </body>
 </html>
 <script>
-    let login_api_link='https://nameless-earth-14050.herokuapp.com/api/signup';
-
-    async function getdata(){
-        let res = await fetch(login_api_link);
-        let data = await res.json();
-        console.log(data);
-        
-        return data;
-        
-    }
+  
     
-    
+  let signinArr = JSON.parse(localStorage.getItem("signupKey")) || [];
     async function login(){
         event.preventDefault();
-        username=document.getElementById('email').value;
-        password=document.getElementById('pass').value;
-        data=await getdata();
-        data.forEach(function(el){
-            if(username==el.username && password==el.password){
-                toggle(el.id);
-                console.log(el.id);
-                //window.location.href="home.html";
-            }else{
-                console.log("NO")    
-            }
-        })
-    }  
+        EmailAdd=document.getElementById('email').value;
+        Pass=document.getElementById('pass').value;
+        let flag = false;
+    signinArr.forEach(function (el) {
+      if (EmailAdd == el.oEmail && Pass == el.oPassword) {
+        return (flag = true);
+      }
+    });
+    console.log(flag);
 
-    let toggle = async (id)=>{
-        console.log(id);
-        let s = await fetch(`https://nameless-earth-14050.herokuapp.com/api/signup/${id}`);
-        s = await s.json();
-        let a = {
-            status:!s.status
-        };
-        let res = await fetch(`https://nameless-earth-14050.herokuapp.com/api/signup/${id}`,{
-            method:"PATCH",
-            body:JSON.stringify(a),
-            headers:{
-                "content-Type":"application/json"
-            }
-        });
-        
-        getdata();
+    if (flag) {
+      alert("You Are Successfully Logged In.");
+      localStorage.setItem("system","online");
+      window.location.href = "index.html";
+    } else {
+      alert("Wrong ID/Password");
+
+      window.location.reload();
     }
+  }
         
 </script>
