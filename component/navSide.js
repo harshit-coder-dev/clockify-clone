@@ -6,8 +6,8 @@ let navegabar = ()=>{
     </div>
 </div>
 <div id="info">
-    <div id="user-name">
-        Manoj Kumar's workspace <i class="fa-solid fa-sort-down"></i>
+    <div  class="showUser" id="user-name">
+        <i class="fa-solid fa-sort-down"></i>
     </div>
     <div class="dropdown" id="drop">
         <div id="flex1">
@@ -15,7 +15,7 @@ let navegabar = ()=>{
             <div style="color:#58c6f8">Manage</div>
         </div>
         <div id="flex1">
-            <div>Manoj kumar's workspace</div>
+            <div class="showUser"></div>
             <div style="color:rgb(9, 220, 9)"><i style="margin-right: 15px;color:rgb(9, 220, 9)"
                     class="fa-solid fa-check"></i>Active</div>
         </div>
@@ -42,12 +42,12 @@ let navegabar = ()=>{
     </div>
     <div class="vertical_dotted_line"></div>
 
-    <div id="name-short">MK
+    <div id="name-short">
 
     </div>
     <div class="dropdown4">
-        <p>Manoj Kumar</p>
-        <p>aarushroy282@gmail.com</p>
+        <p class="showUser"></p>
+        
         <hr>
         <p> Profile Setting</p>
         <div id="dark">

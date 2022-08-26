@@ -328,3 +328,8 @@ input:checked + .slider:before {
 .marginLeft{
   margin-left: 10px;
 }
+
+#name-short{
+  text-transform: uppercase;
+  text-align: center;
+}

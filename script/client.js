@@ -113,10 +113,21 @@ check.addEventListener("change", () => {
 
 let login = localStorage.getItem("system");
 
-if(login == "online"){
-    let userData = JSON.parse(localStorage.getItem("signupKey"));
+if(login){
+
+    let user1=document.querySelectorAll(".showUser");
+    user1.forEach(el=>{
+    let p=document.createElement("p");
+    
+        el.innerHTML=login;
+        //  console.log("el",el);
+    })
+    
+let shorName=document.getElementById("name-short");
+shorName.innerText=`${login[0]+login[1]}`
 
 }
+
 
 
 
