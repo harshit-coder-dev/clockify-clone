@@ -44,11 +44,12 @@
         
         #avi_login{
             
-            padding:20px;
+            padding:30px 40px;
+            border-radius: 10px;
             margin:auto;
             margin-bottom:100px;
             display: grid;
-            gap:10px;
+            gap:15px;
             width:300px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -120,6 +121,10 @@
         #logbtn{
             background-color: white;
             border: transparent;
+        }
+        input{
+            padding-left: 10px;
+            
         }
         
     </style>
@@ -207,28 +212,4 @@
   }
 
 
-/* 
-    let submit = async () =>{
-    
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("pass").value;
-    let data = {
-        id:Date.now(),
-        username:email,
-        password:password,
-        status:false,
-        
-    };
-
-    let res = await fetch("https://nameless-earth-14050.herokuapp.com/api/signup",{
-        method:"POST",
-        body:JSON.stringify(data),
-        headers:{
-            "Content-Type": "application/json",
-        },
-    });
-    res = await res.json();
-    window.location.href="login.html";
-    
-} */
 </script>
