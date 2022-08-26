@@ -156,10 +156,10 @@
   }
   
   #main-content {
-    width: 100%;
+    width: 80%;
     height: 100vh;
     background-color: var(--secondary);
-    /* padding-left: 20px; */
+    padding-left: 20px;
     justify-content: flex-start;
     display: flex;
     border: 1px solid transparent;

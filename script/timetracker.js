@@ -48,3 +48,19 @@ function displayTimer(){
 
  timerRef.innerHTML = ` ${h} : ${m} : ${s}`;
 }
+
+
+
+
+let Close=document.querySelector(".cls-new-prj")
+let Create=document.querySelector(".crt-new-prj");
+
+let modal=document.getElementById("modal");
+let pro=document.querySelector(".project");
+pro.addEventListener("click",()=>{
+    openModal()
+})
+
+
+
+
