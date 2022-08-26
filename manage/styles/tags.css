@@ -7,7 +7,8 @@
 
 .content {
     width: 95%;
-    margin: auto;
+    /* margin: auto; */
+    padding: 20px 10px 0 20px;
 }
 
 #content-tags {
