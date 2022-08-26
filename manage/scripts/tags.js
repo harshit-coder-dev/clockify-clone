@@ -100,7 +100,7 @@ let openEditModal = (e) => {
     modal_cont.setAttribute('class', 'modal-content');
 
     let detail_div = createElem('div');
-    detail_div.setAttribute('class', 'crt-1')
+    detail_div.setAttribute('class', 'tag-1')
 
     let edit_tag = createElem('p');
     edit_tag.textContent = 'Edit Tag';

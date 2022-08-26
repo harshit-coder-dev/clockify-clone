@@ -16,11 +16,11 @@ let appendNames = () => {
         catchElem('#component-1 > p').textContent = e.client_name;
     });
 };
+appendNames();
 
 window.onload = () => {
-    appendNames();
-    showTasks();
 
+    showTasks();
 }
 
 let component_tabs = catchElem('.component-tabs-data');
@@ -331,6 +331,7 @@ let showPrjSettings = () => {
         }
 
         localStorage.setItem('project-details', JSON.stringify(prj_data));
+
     }
 
     pj_client_div.append(pj_cl_name, pj_change_cl);
