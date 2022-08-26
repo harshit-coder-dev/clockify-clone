@@ -25,7 +25,7 @@ if (planName === 'Enterprise Upgrade') {
     headPara.style.color = "#9b51e0";
 }
 
-let paymentInfo = () =>{
+let paymentInfo = () => {
     return `<p id="bottomHeader">Payment information
     </p>
     <div id="cardDetails">
@@ -99,95 +99,97 @@ let yearlybtn = document.getElementById('yearlybtn');
 yearlybtn.onclick = () => {
     totalamountYearly();
 }
-let yrPrice = (price*80/100).toFixed(2) * 12;
+let yrPrice = (price * 80 / 100).toFixed(2) * 12;
 
-totalamountYearly = ()=>{
+totalamountYearly = () => {
     planPrice.innerText = `x $${yrPrice}`;
     seats.value = 1;
     seats.disabled = true;
-    let totalprice = yrPrice ;
-    
+    let totalprice = yrPrice;
+
     totalPrice.innerText = `$${totalprice}`;
     totalAmount.innerText = `$${totalprice}`;
     let today = new Date();
-    let date = `${monthNames[today.getMonth()]} ${today.getDate()} - ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear()+1}`;
+    let date = `${monthNames[today.getMonth()]} ${today.getDate()} - ${monthNames[today.getMonth()]} ${today.getDate()}, ${today.getFullYear() + 1}`;
     planTime.innerText = date;
     monthlybtn.style.backgroundColor = "#ffffff";
     yearlybtn.style.backgroundColor = "#e4eaee";
 }
 
-confirmPayment.onclick = ()=>{
-let companyName = document.getElementById("companyName");
-if(companyName.value == ""){
-    alert("Company Name is mandatory");
-}
-else{
-    payinf.style.borderBottom = "1px solid black";
-    invinf.style.borderBottom = "1px solid #C6D2D9";
-    bottomBox.innerHTML = null;
-    bottomBox.innerHTML = paymentInfo();
-}
+confirmPayment.onclick = () => {
+    let companyName = document.getElementById("companyName");
+    if (companyName.value == "") {
+        alert("Company Name is mandatory");
+    }
+    else {
+        payinf.style.borderBottom = "1px solid black";
+        invinf.style.borderBottom = "1px solid #C6D2D9";
+        bottomBox.innerHTML = null;
+        bottomBox.innerHTML = paymentInfo();
+    }
 }
 
-let checkCvv = (value) =>{
-    if(value == 123) return true;   
+let checkCvv = (value) => {
+    if (value == 123) return true;
 }
 let processpopup = document.getElementById("processpopup");
 let donepopup = document.getElementById("donepopup");
 let failedpopup = document.getElementById("failedpopup");
 
-let finishPayment = ()=>{
+let finishPayment = () => {
     let Name = document.getElementById('Name').value;
-let Street = document.getElementById('Street').value;
-let City = document.getElementById('City').value;
-let Zip = document.getElementById('ZIP').value;
-let State = document.getElementById('State').value;
-let Country = document.getElementById('Country').value;
-let CheckTick = document.getElementById('CheckTick');
+    let Street = document.getElementById('Street').value;
+    let City = document.getElementById('City').value;
+    let Zip = document.getElementById('ZIP').value;
+    let State = document.getElementById('State').value;
+    let Country = document.getElementById('Country').value;
+    let CheckTick = document.getElementById('CheckTick');
 
-    if(Name == "" && Street == "" && City == "" && Zip == "" && State == "" && Country == "" && CheckTick.checked == false){
+    if (Name == "" && Street == "" && City == "" && Zip == "" && State == "" && Country == "" && CheckTick.checked == false) {
         alert("Name and street and city and zip are mandatory things. Please fill up!");
     }
-    else if(CheckTick.checked){
+    else if (CheckTick.checked) {
         document.getElementById("finishPayment").style.backgroundcolor = "#04628e";
-        let cvv =+( document.getElementById("cvv").value);
-    processpopup.classList.add("open-popup");
-    if(checkCvv(cvv)){
-        setTimeout(()=>{
-            processpopup.classList.remove("open-popup");
-            donepopup.classList.add("open-popup");
-        },2000);
-    }
-    else{
-        setTimeout(()=>{
-            processpopup.classList.remove("open-popup");
-        failedpopup.classList.add("open-popup");
-        },2000);
-    }
+        let cvv = +(document.getElementById("cvv").value);
+        processpopup.classList.add("open-popup");
+        if (checkCvv(cvv)) {
+            setTimeout(() => {
+                processpopup.classList.remove("open-popup");
+                donepopup.classList.add("open-popup");
+            }, 2000);
+        }
+        else {
+            setTimeout(() => {
+                failedBtn.style.backgroundColor = "red";
+                processpopup.classList.remove("open-popup");
+
+                failedpopup.classList.add("open-popup");
+            }, 2000);
+        }
     }
 }
-donebtn.onclick = ()=>{
+donebtn.onclick = () => {
     donepopup.style.transition = "0.4s";
     donepopup.classList.remove("open-popup");
-    window.location.href="index.html";
+    window.location.href = "index.html";
 }
-failedBtn.onclick = ()=>{
+failedBtn.onclick = () => {
     failedpopup.style.transition = "0.4s";
     failedpopup.classList.remove("open-popup");
-    
+
 }
-let cardspace=()=>{
+let cardspace = () => {
     let cardDigit = document.getElementById("cardNumber").value;
-    if(cardDigit.length == 4 || cardDigit.length == 9 || cardDigit.length ==14){
-        document.getElementById("cardNumber").value = cardDigit+' ';
+    if (cardDigit.length == 4 || cardDigit.length == 9 || cardDigit.length == 14) {
+        document.getElementById("cardNumber").value = cardDigit + ' ';
         document.getElementById("cardNumber").max = 1;
     }
 
 }
-let addSlash=()=>{
+let addSlash = () => {
     let cardDigit = document.getElementById("validtill").value;
-    if(cardDigit.length == 2){
-        document.getElementById("validtill").value = cardDigit+'/';
+    if (cardDigit.length == 2) {
+        document.getElementById("validtill").value = cardDigit + '/';
         document.getElementById("validtill").max = 1;
     }
 
