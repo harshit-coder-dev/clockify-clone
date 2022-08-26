@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>client</title>
+    <link rel="icon" href="https://clockify.me/assets/images/favicon.ico">
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/timetracker.css">
+      </head>
+
+  <body>
+    <div id="navbar"></div>
+
+    <div id="box">
+      <!-- sidebar------------------------------- -->
+      <div id="sidebar"></div>
+
+      <div id="main-content">
+        <div class="addproject">
+            <div class="form">
+                <form action="" id="form">
+                    <input type="text" placeholder="What are you working on?" id="query">
+                </form>
+            </div>
+            <div class="project">
+                    <i class="fa-solid fa-circle-plus" id="plus"></i>
+                    <p>Project</p>
+            </div>
+             <div class="tag">
+                <img src="https://app.clockify.me/assets/nav-icons/tags.svg" alt="" class="tag">
+            </div>
+             <div class="dollar">
+               <p>$</p>
+             </div>
+             <div class="timer" id="timer">
+             00:00:00
+             </div>
+             <div class="start">
+              <button id="timer_start" class="toggle">Start</button>
+             </div>
+             <div class="twologo">
+                <img src="https://app.clockify.me/assets/nav-icons/time-tracker.svg" alt="">
+                <br>
+                <br>
+              <img src="https://app.clockify.me/assets/ui-icons/list-blue.svg" alt="">
+             </div>
+           </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./script/navbar.js" type="module"></script>
