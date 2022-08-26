@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    background-color: #f2f6f8;
+  }
+  #main{
+    width: 80%;
+    margin: auto;
+  }
+  #main-container{
+    display: grid;
+    grid-template-columns: 43% 57%;
+    gap: 30px;
+    padding: 2.8572rem 0.7143rem;
+  }
+  #plan{
+    padding: 0.7143rem 1.4286rem 1.4286rem;
+    border-radius: 2px;
+    border: 1px solid #C6D2D9;
+    background-color: white;
+
+  }
+  #planbtn{
+    display: grid;
+        grid-template-columns: repeat(2,1fr);
+  }
+  #planbtn>button{
+    border-color: #c6d2d9;
+color: #666;
+background: #ffffff;
+font-weight: 400;
+border: 1px solid #e4eaee;
+font-size: 15px;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  #planbtn>button:last-child{
+    display: flex;
+justify-content: center;
+align-items: center;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  #green{
+    color: #fff;
+background-color: #4caf50;
+margin-left: 0.7143rem;
+padding: 0.35715rem 0.7143rem;
+font-size: 10px;
+font-weight: 400;
+line-height: 1;
+text-align: center;
+border-radius: 2px;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  #planname{
+    display: inline-block;
+  }
+  #tp{
+    border-radius: 2px;
+    border: 1px solid #C6D2D9;
+    padding: 1.4286rem;
+  }
+  #priceSec{
+    display: flex;
+
+    align-items: center;
+
+  }
+  #seats{
+    margin-left: 1.4286rem;
+    margin-right: 0.7143rem;
+    border: 1px solid #C6D2D9;
+    min-height: 25px;
+    width: 55px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #C6D2D9;
+    border-radius: 2px;
+    padding-left: 15px;
+  }
+  #totalPrice{
+    margin-left: auto;
+
+  }
+  #finalAmount{
+    display: flex;
+    justify-content: space-between;
+  }
+  #finalAmount>p{
+    color: #333;
+    font-weight: 500;
+    font-size: 1.286rem;
+  }
+  #invoice{
+    padding: 0.7143rem 1.4286rem 1.4286rem;
+    border-radius: 2px;
+    border: 1px solid #C6D2D9;
+    background-color: white;
+  }
+  button, input {
+    overflow: visible;
+}
+#invoiceSteps{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.topHeader{
+    background: none;
+    color: #333;
+    border-color: #333;
+    border: none;
+    border-bottom: 1px solid #C6D2D9;
+    font-size: .8571rem;
+    transition: background-color .2s ease-in-out;
+    min-width: 7.143rem;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    text-align: left;
+}
+.topHeader>p:first-child{
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+#bottomBox{
+    padding: 0.7143rem 0;
+}
+#bottomHeader{
+    color: #666;
+    margin-bottom: 1.4286rem;
+    font-size: 1.714rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+#cardImg{
+    display: flex;
+    gap: 3px;
+}
+.label{
+    display: inline;
+}
+.gray{
+    display: inline;
+    color: #999;
+}
+
+#bottomBox>input{
+    display: block;
+    width: 80%;
+    height: calc(2.716rem + 2px);
+    padding: 0 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #fff;
+    border: 1px solid #C6D2D9;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+#expCvv{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem -5px;
+    gap: 60px;
+}
+#expCvv>div>input{
+    color: #31325F;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+#cardDetails>input{
+    color: #31325F;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+#checkBox{
+    padding:0 5px;
+    margin-bottom: 1.4286rem;
+    margin-top: 0.35715rem;
+
+}
+#gray{
+    color: #999;
+    font-size: 14px;
+    width: 85%;
+}
+#confirmPayment , #finishPayment{
+    color: #fff;
+    background-color: #03a9f4;
+    border-color: #03a9f4;
+    text-transform: uppercase;
+    min-width: 7.143rem;
+    display: block;
+    width: 85%;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 0.608rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 2px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#confirmPayment:disabled{
+    opacity: .65;
+}
+:focus{
+    outline: none;
+}
+a {
+    color: #03a9f4;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="text" i] {
+    padding: 1px 2px;
+}
+ul{
+    line-height: 2rem;
+    padding: 0 1.4286rem;
+    list-style: square;
+    
+    margin-top: 0;
+margin-bottom: 1rem;
+margin-block-start: 1em;
+margin-block-end: 1em;
+padding-inline-start: 40px;
+color: green;
+  }
+  #ulRed{
+    color: red;
+  }
+  #addHr{
+    margin-right: 90px;
+    width: 85%;
+  }
+  #invinf{
+    border-bottom:1px solid black;
+  }
+  #addHr+a{
+    display: block;
+    margin: 1rem 0;
+  }
+  #planTime{
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .8571rem;
+    margin-bottom: 1.07145rem;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    visibility: hidden;
+    transition: 0.4s;
+
+  }
+  .open-popup{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .popup img{
+    width: 150px;
+    margin-top: -50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  .popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border : 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+  }
+  button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+  }
