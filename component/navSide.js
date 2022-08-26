@@ -1,4 +1,4 @@
-let navegabar = ()=>{
+let navegabar = () => {
     return ` <div id="logo-div">
     <div id="menu-icon"><i class="fa-solid fa-bars"></i></div>
     <div id="logo">
@@ -68,7 +68,7 @@ let navegabar = ()=>{
 </div>`;
 }
 
-let SideBar = ()=>{
+let SideBar = () => {
     return `<div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/time-tracker.svg" alt=""></i></div>
     <div class="hide-show">TIME TRACKER</div>
@@ -92,11 +92,14 @@ let SideBar = ()=>{
 </div>
 <p class="hide-show gray">MANAGE</p>
 
+<a href="../manage/project.html">
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/projects.svg" alt=""></div>
     <div class="hide-show">PROJECTS</div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
+</a>
+
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/teams.svg" alt=""></i></div>
     <div class="hide-show">TEAM</div>
@@ -108,11 +111,14 @@ let SideBar = ()=>{
     <div class="hide-show" id="clt">CLIENTS</div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
+
+<a href="../manage/tags.html">
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/tags.svg" alt=""></i></div>
     <div class="hide-show"> TAGS</div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
+</a>
 
 
 <div>
@@ -178,8 +184,8 @@ let SideBar = ()=>{
 </div>`;
 }
 
-let popupHtml=()=>{
-    return`
+let popupHtml = () => {
+    return `
     <div class="container">
     <div id="head"> 
         <h1>Edit client</h1>
@@ -200,4 +206,4 @@ let popupHtml=()=>{
 </div>`
 }
 
-export {navegabar , SideBar , popupHtml}
+export { navegabar, SideBar, popupHtml }

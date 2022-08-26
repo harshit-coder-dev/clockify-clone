@@ -1,4 +1,4 @@
-import {navegabar , SideBar , popupHtml} from "../pr-component/nav_side.js";
+import {navegabar , SideBar , popupHtml} from "../component/navSide.js";
 
 document.getElementById("navbar").innerHTML = navegabar();
 let sidebar = document.getElementById("sidebar");
