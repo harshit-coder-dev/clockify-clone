@@ -12,10 +12,10 @@
       referrerpolicy="no-referrer"
     />
     <title>client</title>
-    <link rel="icon" href="https://clockify.me/assets/images/favicon.ico">
+    <link rel="icon" href="https://clockify.me/assets/images/favicon.ico" />
     <link rel="stylesheet" href="./style/navbar.css" />
-    <link rel="stylesheet" href="./style/timetracker.css">
-      </head>
+    <link rel="stylesheet" href="./style/timetracker.css" />
+  </head>
 
   <body>
     <div id="navbar"></div>
@@ -26,36 +26,65 @@
 
       <div id="main-content">
         <div class="addproject">
-            <div class="form">
-                <form action="" id="form">
-                    <input type="text" placeholder="What are you working on?" id="query">
-                </form>
-            </div>
+          <div class="form">
+            <input
+              type="text"
+              placeholder="What are you working on?"
+              id="query"
+            />
+          </div>
+          <div class="ram">
             <div class="project">
-                    <i class="fa-solid fa-circle-plus" id="plus"></i>
-                    <p>Project</p>
-            </div>
-             <div class="tag">
-                <img src="https://app.clockify.me/assets/nav-icons/tags.svg" alt="" class="tag">
-            </div>
-             <div class="dollar">
-               <p>$</p>
-             </div>
-             <div class="timer" id="timer">
-             00:00:00
-             </div>
-             <div class="start">
-              <button id="timer_start" class="toggle">Start</button>
-             </div>
-             <div class="twologo">
-                <img src="https://app.clockify.me/assets/nav-icons/time-tracker.svg" alt="">
-                <br>
-                <br>
-              <img src="https://app.clockify.me/assets/ui-icons/list-blue.svg" alt="">
-             </div>
-           </div>
+                <img
+                  src="https://app.clockify.me/assets/ui-icons/plus-blue-req.svg"
+                  alt=""
+                />
+                <p>Project</p>
+              </div>
+              <div class="tag">
+                <img
+                  src="https://app.clockify.me/assets/nav-icons/tags.svg"
+                  alt=""
+                  class="tag"
+                />
+              </div>
+              <div class="dollar">
+                <p>$</p>
+              </div>
+              <div class="timer" id="timer"><p>00:00:00</p></div>
+              <div class="start">
+                <button id="timer_start" class="toggle">Start</button>
+              </div>
+              <div class="twologo">
+                <img
+                  src="https://app.clockify.me/assets/nav-icons/time-tracker.svg"
+                  alt=""
+                />
+                <br />
+                <br />
+                <img
+                  src="https://app.clockify.me/assets/ui-icons/list-blue.svg"
+                  alt=""
+                />
+              </div>
+          </div>
+        </div>
       </div>
     </div>
+
+     <!------------------- time tracket bottom part  ------------------>
+
+
+    <!-- <div class="week">
+        <div class="thisweek">
+            <p>This week</p>
+            <p>Week total: 00:00:00</p>
+        </div>
+        </div> -->
+        <div  id="timetracker_body">
+      
+        </div>
   </body>
 </html>
 <script src="./script/navbar.js" type="module"></script>
+<script src="./script/timetracker.js"></script>
