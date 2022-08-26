@@ -8,13 +8,14 @@
   --secondary: black;
 }
 
-
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #f2f6f8;
-  font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -41,7 +42,6 @@ body{
   gap: 15px;
   justify-content: center;
   align-items: center;
-  
 }
 
 #info {
@@ -66,31 +66,31 @@ body{
 }
 
 .vertical_dotted_line {
-  border-right: 1px dotted #C6D2D8;
+  border-right: 1px dotted #c6d2d8;
   height: 30px;
 }
 
 #upgrade {
   margin-left: 1.4286rem;
   padding: 0.25rem 0.5rem;
-    font-size: .8571rem;
-    line-height: 1.4;
-    border-radius: 2px;
-    color: white;
-    font-weight: 400;
-    text-align: center;
-    border: 1px solid #03a9f4;
+  font-size: 0.8571rem;
+  line-height: 1.4;
+  border-radius: 2px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #03a9f4;
 }
-a{
+a {
   color: #03a9f4;
   cursor: pointer;
-    text-decoration: none;
-    background-color: transparent;
+  text-decoration: none;
+  background-color: transparent;
 }
-#upgrade:hover{
+#upgrade:hover {
   background-color: #03a9f4;
 }
-#upgrade>a:hover{
+#upgrade > a:hover {
   color: white;
 }
 #name-short {
@@ -102,19 +102,21 @@ a{
 
 #sidebar {
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   border: 1px solid#C6D2D8;
   border-bottom: none;
-    border-top: none;
-    width: 10%;
-  
+  border-top: none;
+  width: 14%;
+
   border-left: 4px solid #58c6f8;
-  border-right: 1px solid #C6D2D8;
-  
+  border-right: 1px solid #c6d2d8;
+
   background-color: var(--primary);
   transition: width 0.3s linear;
 }
-
+/* .main-container{
+  width:80%;
+} */
 .one-div-flex {
   display: flex;
   gap: 15px;
@@ -135,8 +137,6 @@ flex-direction: column;
 .one-div-flex:hover > div > .fa-grip-vertical {
   color: #3c3837;
 }
-
-
 
 .fa-grip-vertical {
   color: #b1adac;
@@ -170,16 +170,15 @@ flex-direction: column;
   transform: rotate(180deg);
 }
 
-
 .dropdown {
   display: none;
   position: absolute;
-  top: 32px;
+  top: 70px;
   right: 320px;
   left: auto;
   z-index: 1000;
   width: 300px;
-  box-shadow: 0 5px 10px white;
+  box-shadow: 0 4px 3px rgb(75, 68, 68);
   text-align: left;
   background-color: white;
 }
@@ -193,7 +192,7 @@ flex-direction: column;
 .dropdown2 {
   display: none;
   position: absolute;
-  top: 32px;
+  top: 60px;
   right: 100px;
   left: auto;
   z-index: 10001;
@@ -201,21 +200,20 @@ flex-direction: column;
   text-align: left;
   margin-top: 10px;
   background-color: white;
-  box-shadow: 0 5px 10px white;
+  box-shadow: 0 4px 3px rgb(75, 68, 68);
 }
 
 .dropdown3 {
   display: none;
   position: absolute;
-  top: 32px;
+  top: 70px;
   right: 100px;
   left: auto;
   z-index: 10002;
   text-align: left;
   margin-top: 10px;
   background-color: white;
-  box-shadow: 0 5px 10px white;
-  width: 400px;
+  box-shadow: 0 4px 3px rgb(75, 68, 68);  width: 400px;
   padding: 10px;
 }
 
@@ -226,14 +224,14 @@ flex-direction: column;
 .dropdown4 {
   display: none;
   position: absolute;
-  top: 32px;
+  top: 70px;
   right: 30px;
   left: auto;
   z-index: 10002;
   text-align: left;
   margin-top: 10px;
   background-color: var(--primary);
-  box-shadow: 0 5px 10px white;
+  box-shadow: 0 4px 3px rgb(75, 68, 68);
   width: 250px;
   padding: 10px;
 }
@@ -311,11 +309,11 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-#user-name{
+#user-name {
   margin-bottom: 10px;
 }
 
-.hide-show{
+.hide-show {
   font-size: small;
   text-transform: uppercase;
   color: #000000e6;
