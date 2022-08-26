@@ -1,4 +1,4 @@
-import {navegabar , SideBar , popupHtml} from "../component/navSide.js";
+import {navegabar , SideBar} from "../component/navSide.js";
 
 document.getElementById("navbar").innerHTML = navegabar();
 let sidebar = document.getElementById("sidebar");
