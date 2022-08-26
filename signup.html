@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            font-family: sans-serif;
+        }
         #main{
             text-align: center;
         }
@@ -133,10 +136,10 @@
             <p>No credit card required · Unsubscribe at any time</p>
             <div id="avi_login">
                 <h2>Sign up</h2>
-                <input type="text" placeholder="Enter Email" id="email">
-                <input type="text" placeholder="Choose Password" id="pass">
+                <input type="email" placeholder="Enter Email" id="email">
+                <input type="password" placeholder="Choose Password" id="pass">
                 <span id="sp"><p><input type="checkbox">I agree to the <a href="#" id="fp">Terms of Use</a></p></span>
-                <button id="log" onclick="submit()">CREATE FREE ACCOUNT</button>
+                <button id="log" onclick="myFunction()">CREATE FREE ACCOUNT</button>
                 <hr>
                 <button id="google">
                     <div>
@@ -161,6 +164,50 @@
 </html>
 <script>
     //https://nameless-earth-14050.herokuapp.com/api/signup
+
+    let signupArr = JSON.parse(localStorage.getItem("signupKey")) || [];
+    function myFunction(event) {
+     
+
+    let signupObj = {
+      
+      oEmail: document.querySelector("#email").value,
+      
+      oPassword: document.querySelector("#pass").value,
+    };
+
+    if (
+      signupObj.oEmail == "" ||
+      
+      signupObj.oPassword == ""
+    ) {
+      alert("Please Enter Your Details");
+    } else {
+      if (checkEmail(signupObj.oEmail) === true) {
+        signupArr.push(signupObj);
+        localStorage.setItem("signupKey", JSON.stringify(signupArr));
+        alert("Account Created Successfully, Click On Log In");
+      }
+    }
+  }
+
+  /*Email validation check*/
+
+  function checkEmail(oEmail) {
+    let filtered = signupArr.filter(function (el) {
+      return oEmail === el.oEmail;
+    });
+    //console.log(filtered);
+    if (filtered.length > 0) {
+      alert("Account Already Exists Click On Log In");
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+
+/* 
     let submit = async () =>{
     
     let email = document.getElementById("email").value;
@@ -183,5 +230,5 @@
     res = await res.json();
     window.location.href="login.html";
     
-}
+} */
 </script>
