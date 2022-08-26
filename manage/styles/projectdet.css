@@ -1,0 +1,313 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content {
+    width: 95%;
+    /* margin: auto; */
+    padding: 20px 10px 0 20px;
+}
+
+#component-1 {
+    margin: 20px 0 40px 0;
+}
+
+#component-1>a {
+    text-decoration: none;
+    margin: 0 0 10px 0;
+    color: #03a9f4;
+}
+
+#component-1>a:hover {
+    text-decoration: underline;
+}
+
+#component-1>h1 {
+    font-weight: 500;
+    color: #666666;
+}
+
+#component-1>p {
+    color: #666666;
+}
+
+.component-tabs>button {
+    padding: 0 15px 0 15px;
+    height: 43px;
+    background-color: #e4eaee;
+    border: 0.5px solid gainsboro;
+    cursor: pointer;
+}
+
+.component-tabs>button:hover {
+    background-color: #ffffff;
+}
+
+.component-tabs-data {
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 5px 20px 5px 20px;
+    margin: 20px 0 0 0;
+}
+
+.div-controls {
+    height: 40px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-controls>div:first-child {
+    height: 40px;
+}
+
+.div-controls>div:first-child>select {
+    height: 40px;
+    cursor: pointer;
+    margin: 0 20px 0 0;
+    border: 00.5px solid gainsboro;
+}
+
+.div-controls>div:first-child>input {
+    height: 40px;
+    width: 245px;
+    margin: 0 20px 0 0;
+    padding-left: 10px;
+    border: 00.5px solid gainsboro;
+}
+
+.div-controls>div:nth-child(2) {
+    height: 40px;
+}
+
+.div-controls>div:nth-child(2)>input {
+    height: 40px;
+    width: 160px;
+    margin: 0 20px 0 0;
+    padding-left: 10px;
+    border: 00.5px solid gainsboro;
+}
+
+.div-controls>div:nth-child(2)>button {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    color: white;
+    background-color: #03a9f4;
+    border: none;
+    outline: none;
+}
+
+.component-tabs-data>div:nth-child(2)>table {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: 0.5px solid gainsboro;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>th {
+    text-align: left;
+    font-weight: 400;
+    color: #666666;
+    height: 40px;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>td {
+    height: 40px;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>th:nth-child(2) {
+    width: 50%;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>td:nth-child(1) {
+    width: 40%;
+    /* text-decoration: line-through; */
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>td:nth-child(2) {
+    width: 40%;
+}
+
+.component-tabs-data>div:nth-child(2)>table>tr>button {
+    background-color: transparent;
+    border: 0.5px solid gainsboro;
+    color: #03a9f4;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.div-controls+div>div {
+    width: 100%;
+    height: 40px;
+    color: #666666;
+    background-color: #e4eaee;
+    padding: 8px 0 0 20px;
+}
+
+.access-div {
+    width: 100%;
+    height: auto;
+}
+
+.access-div>div:nth-child(1) {
+    height: 90px;
+    border-bottom: 0.5px solid gainsboro;
+    margin: 10px 0 20px 0;
+}
+
+.access-div>div:nth-child(1)>h2 {
+    font-weight: 500;
+}
+
+.access-div>div:nth-child(1)>p {
+    margin-bottom: 10px;
+    color: #999999;
+}
+
+.access-div>div:nth-child(2) {
+    height: 40px;
+    background-color: #e4eaee;
+    margin: 10px 0 20px 0;
+    padding: 8px 0 0 20px;
+}
+
+.access-div>div:nth-child(2)>p {
+    color: #999999;
+}
+
+.access-div>table {
+    width: 100%;
+    border: 0.5px solid gainsboro;
+}
+
+.access-div>table>tr {
+    height: 40px;
+}
+
+.access-div>table>tr>th {
+    color: #999999;
+    text-align: left;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.access-div>table>tr>td {
+    color: #333333;
+    text-align: left;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.note-div {
+    width: 550px;
+    height: 250px;
+    border: 0.5px solid gainsboro;
+    margin: 20px 0 20px 0;
+}
+
+#note-input {
+    height: 40%;
+    width: 540px;
+    outline: none;
+    border: none;
+    margin: 20px 0 0 0;
+    padding: 0 0 0 10px;
+    color: transparent;
+}
+
+.note-div>p {
+    height: 40%;
+    font-size: smaller;
+    padding: 0 0 0 10px;
+}
+
+.prj-settings {
+    width: 100%;
+}
+
+.prj-settings>div:nth-child(1) {
+    margin: 20px 0 0 0;
+    height: 95px;
+}
+
+.prj-settings>div:nth-child(1)>h2 {
+    margin: 0 0 10px 0;
+    color: #333333;
+    font-size: 18px;
+}
+
+.prj-settings>div:nth-child(1)>input {
+    width: 620px;
+    height: 40px;
+    border: 0.5px solid gainsboro;
+    outline: none;
+    padding-left: 20px;
+}
+
+.prj-settings>div:nth-child(2) {
+    margin: 20px 0 0 0;
+    height: 95px;
+}
+
+.prj-settings>div:nth-child(2)>h2 {
+    margin: 0 0 10px 0;
+    color: #333333;
+    font-size: 18px;
+}
+
+.prj-settings>div:nth-child(2)>input {
+    width: 620px;
+    height: 40px;
+    border: 0.5px solid gainsboro;
+    outline: none;
+    padding-left: 20px;
+}
+
+.prj-settings>div:nth-child(3) {
+    margin: 20px 0 0 0;
+    height: 150px;
+}
+
+.prj-settings>div:nth-child(3)>h2 {
+    margin: 0 0 10px 0;
+    color: #333333;
+    font-size: 18px;
+}
+
+.prj-settings>div:nth-child(3)>p {
+    color: #999999;
+    margin: 10px 0 20px 0;
+}
+
+.prj-settings>div:nth-child(3)>select {
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    border: 0.5px solid gainsboro;
+}
+
+.prj-settings>div:nth-child(4) {
+    display: flex;
+    margin: 10px 0 10px 0;
+    height: 50px;
+    padding: 15px 0 0 15px;
+    background-color: #cdeefd;
+    gap: 20px;
+}
+
+.prj-settings>div:nth-child(4)>div>button {
+    width: 70px;
+    height: 27px;
+    background-color: #03a9f4;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
