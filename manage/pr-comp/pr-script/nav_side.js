@@ -1,4 +1,4 @@
-import {navegabar , SideBar , popupHtml} from "../component/navSide.js";
+import {navegabar , SideBar , popupHtml} from "../pr-component/nav_side.js";
 
 document.getElementById("navbar").innerHTML = navegabar();
 let sidebar = document.getElementById("sidebar");
@@ -42,9 +42,6 @@ one.addEventListener("click", () => {
     }
 
 })
-
-
-
 
 const manoj = document.getElementById("user-name");
 const drop = document.querySelector(".dropdown");
