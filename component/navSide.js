@@ -7,7 +7,6 @@ let navegabar = ()=>{
 </div>
 <div id="info">
     <div  class="showUser" id="user-name">
-        <i class="fa-solid fa-sort-down"></i>
     </div>
     <div class="dropdown" id="drop">
         <div id="flex1">
@@ -99,7 +98,7 @@ let SideBar = ()=>{
 </div>
 <div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/teams.svg" alt=""></i></div>
-    <div class="hide-show">TEAM</div>
+    <div class="hide-show"><a href="team.html">TEAM</a></div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
 <div class="one-div-flex">

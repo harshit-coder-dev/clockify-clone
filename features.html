@@ -5,14 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Feather - Clockify™</title>
+    <link rel="icon" href="https://clockify.me/assets/images/favicon.ico">
     <style>
-        *{
-            font-family: sans-serif;
-        }
+         body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+          Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #333;
+        text-align: left;
+        background-color: white;
+      }
         #avi-top{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            align-items: center;
             height:50px;
             width:90%;
             margin:auto;
@@ -21,15 +34,15 @@
         }
         #top-first{
             display:flex;
-            justify-content: space-between;
-            
+            justify-content: space-evenly;
+            align-items: center;
             width:40%;
             margin-top:12px;
         }
         #top-sec{
             display: flex;
-            justify-content: space-between;
-            
+            justify-content: space-evenly;
+            align-items: center;
             width:30%;
             margin-top:12px;
         }
@@ -139,6 +152,10 @@
             width:40%;
             margin: auto;
         }
+        a{
+            text-decoration: none;
+            color:#8394B7;
+        }
         
     </style>
 </head>
@@ -147,11 +164,11 @@
         <div id="top-first">
             <img src="https://clockify.me/assets/images/clockify-logo.svg" alt="error">
             <div><a href="features.html">Features</a></div>
-            <div><a href="download.html">Download</a></div>
+            <div><a>Download</a></div>
         </div>
         <div id="top-sec">
             <div><a href="login.html">Log In</a></div>
-            <button>SIGN UP FREE</button>
+            <button><a href="signup.html">SIGN UP FREE</a> </button>
         </div>
     </div>
 

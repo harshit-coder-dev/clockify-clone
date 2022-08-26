@@ -116,8 +116,12 @@ totalamountYearly = () => {
     yearlybtn.style.backgroundColor = "#e4eaee";
 }
 
+let compNam = localStorage.getItem('system');
+let companyName = document.getElementById("companyName");
+companyName.value = compNam;
+
 confirmPayment.onclick = () => {
-    let companyName = document.getElementById("companyName");
+    
     if (companyName.value == "") {
         alert("Company Name is mandatory");
     }

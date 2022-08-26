@@ -154,12 +154,6 @@ a {
   display: flex;
 }
 
-#main-content {
-  width: 98%;
-  height: 100vh;
-  background-color: var(--secondary);
-  padding-left: 20px;
-}
 
 .hide1 {
   visibility: hidden;
