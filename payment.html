@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Upgrade • Clockify</title>
+
+    <!-- all links -->
+
+    <link rel="icon" href="https://clockify.me/assets/images/favicon.ico">
+    <link rel="stylesheet" href="./style/payment.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="box">
+        <div id="sidebar"></div>
+        <div id="main">
+            <div id="main-container">
+                <div id="plan">
+                    <div id="planbtn">
+                        <button id="monthlybtn">Monthly Billing</button>
+                        <button id="yearlybtn">
+                          <p>Annual Billing</p> 
+                          <p id="green">SAVE 20%</p>
+                        </button>
+                      </div>
+                      <p id="headPara">
+                        <p id="planname"></p>
+                        for Hakedoc109's workspace workspace
+                      </p>
+                      <div id="tp">
+                        <div>
+                            <p id="planTime"></p>
+                            <div id="priceSec">
+                                <p>User seats</p>
+                            <input type="number" id="seats" min="1" max="12" value="1">
+                            <p id="planPrice"></p>
+                            <p id="totalPrice"></p>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div id="finalAmount">
+                            <p>Total price</p>
+                            <p id="totalAmount"></p>
+                        </div>
+                        
+                      </div>
+                      <ul id="ulGreen">
+                        <li><span>All STANDARD features</span></li>
+                        <li><span>Scheduling</span></li>
+                        <li><span>Expenses</span></li>
+                        <li><span>GPS tracking</span></li>
+                        <li><span>Screenshots</span></li>
+                        <li><span>Force timer</span></li>
+                        <li><span>Labor cost profit</span></li>
+                        <li><span>Scheduled reports</span></li>
+                        <li><span>Budget estimates</span></li>
+                        <li><span>Alerts</span></li>
+                        <li><span>Custom fields</span></li>
+                        <li><span>User fields</span></li>
+                      </ul>
+                      <hr>
+                      <ul id="ulRed">
+                        
+                        <li><span>Single sign-on (SSO)</span></li>
+                        <li><span>Custom subdomain</span></li>
+                        <li><span>Control accounts</span></li>
+                        <li><span>Audit log</span></li>
+                      </ul>
+                      
+                </div>
+                <div id="invoice">
+                    <div id="invoiceSteps">
+                        <div class="topHeader" id="invinf">
+                            <p>step 1</p>
+                            <p>Invoice information</p>
+                        </div>
+                        <div class="topHeader" id="payinf">
+                            <p>step 2</p>
+                            <p>Payment information</p>
+                        </div>
+                    </div>
+                    <div id="bottomBox">
+                        <p id="bottomHeader">Invoice information
+                        </p>
+                        <p class="label">Company name<p class="gray">(required)</p> </p>
+                        <input type="text" id="companyName">
+                        <p class="label">Send emails to<p class="gray">(optional)</p> </p>
+                        <input type="text" id="">
+                        <p class="label">Tax ID<p class="gray">(optional)</p> </p>
+                        <input type="text" id="">
+                        <hr id="addHr">
+                        <a class="label" >Add address<p class="gray">(optional)</p> </a>
+                        
+                        <div id="tnc">
+                        <button id="confirmPayment" >Next step</button>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="processpopup">
+        <img src="https://cdn.dribbble.com/users/447957/screenshots/6899626/payment-animation.gif">
+        <h2>Please Wait!</h2>
+        <p>Your transaction is being processed!</p>
+    </div>
+    <div class="popup" id="donepopup">
+        <img src="https://i.pinimg.com/originals/0d/e4/1a/0de41a3c5953fba1755ebd416ec109dd.gif">
+        <h2>Thank You!</h2>
+        <p>Your plan has been upgraded. Thanks!</p>
+        <button id="donebtn">OK</button>
+    </div>
+    <div class="popup" id="failedpopup">
+        <img src="https://i.pinimg.com/originals/9d/16/7e/9d167e72839894c971c90f60ab00d916.gif">
+        <h2>Uh oh, payment failed!</h2>
+        <p>Wrong credentials. Try Again!</p>
+        <button id="failedBtn">OK</button>
+    </div>
+</body>
+</html>
+<script src="./script/payment.js"></script>
+<script src="./script/client.js" type="module"></script>
