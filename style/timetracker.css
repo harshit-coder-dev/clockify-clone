@@ -3,21 +3,12 @@
   margin: auto;
 }
 .addproject {
-<<<<<<< HEAD
-  width: 87%;
-  height: 9vh;
-  display: flex;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 12%;
-=======
   width: 80%;
   height: 9vh;
   display: flex;
   justify-content: space-evenly;
   position: fixed;
   top: 20%;
->>>>>>> 52e5a8df881c8634a87e3371d96e399209bffb42
   box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
   padding-top: 6px;
 }
@@ -25,10 +16,6 @@
   width: 55%;
   height: 5vh;
   margin: auto;
-<<<<<<< HEAD
-  margin-left: 1%;
-=======
->>>>>>> 52e5a8df881c8634a87e3371d96e399209bffb42
 }
 .addproject input {
   height: 100%;
@@ -63,11 +50,7 @@
   height: 25px;
   margin: auto;
   position: relative;
-<<<<<<< HEAD
-  top: -19%;
-=======
   top: -32%;
->>>>>>> 52e5a8df881c8634a87e3371d96e399209bffb42
 }
 .project p {
   color: #03a9f4;
@@ -82,11 +65,7 @@
   height: 25px;
   border: none;
   position: relative;
-<<<<<<< HEAD
-  top: 30%;
-=======
   top: 25%;
->>>>>>> 52e5a8df881c8634a87e3371d96e399209bffb42
   left: 100%;
 }
 .dollar p {
@@ -149,100 +128,6 @@
 }
 
 
-<<<<<<< HEAD
-
-.thisweek {
-  width: 87%;
-  height: 9vh;
-  display: flex;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 30%;
-  left: 12%;
-  box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
-  padding-top: 6px;
-  background: #e4eaee;
-}
-
-/* -----------------details--------------------- */
-.details {
-  width: 79%;
-  height: 100px;
-  display: flex;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 41.5%;
-  left: 20%;
-  padding-top: 20px;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 5px 1px,
-    rgba(9, 30, 66, 0.25) 0px 10px 1px 1px;
-}
-.details .name {
-  padding-top: 13px;
-}
-.details .name #desc {
-  height: 28px;
-  width: 200px;
-  padding-left: 20px;
-  font-size: medium;
-  color: #03a9f4;
-  border: none;
-}
-
-.details .project {
-  display: flex;
-  width: 100px;
-  justify-content: space-between;
-  padding-top: 17px;
-  border: none;
-}
-.details .p {
-  color: #03a9f4;
-  font-size: 20px;
-  font-weight: bold;
-}
-.details .dollar p {
-  width: 80px;
-  height: 80px;
-  font-size: 40px;
-  font-weight: 500;
-  border: 1px solid black;
-  padding-top: 11px;
-  border: none;
-  color: rgb(153, 153, 153);
-  cursor: pointer;
-}
-
-.details .tag {
-  width: 38px;
-  padding-top: 8px;
-  border: none;
-}
-.details .calender {
-  width: 38px;
-  padding-top: 8px;
-  border: none;
-}
-.details .time {
-  padding-top: 16px;
-}
-.details .time #counttime {
-  height: 40px;
-  width: 80px;
-  font-size: 26px;
-  border: none;
-}
-.details .play {
-  width: 30px;
-  padding-top: 8px;
-  border: none;
-}
-.details .menubtn {
-  width: 13px;
-  height: 50px;
-  padding-top: 8px;
-  border: none;
-=======
 /* ---------------------modal----------------- */
 
 
@@ -374,5 +259,4 @@
   padding: 1rem;
   outline: none;
   border: transparent;
->>>>>>> 52e5a8df881c8634a87e3371d96e399209bffb42
 }
