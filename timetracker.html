@@ -13,7 +13,6 @@
     />
     <title>client</title>
     <link rel="icon" href="https://clockify.me/assets/images/favicon.ico" />
-    <link rel="stylesheet" href="./style/navbar.css" />
     <link rel="stylesheet" href="./style/timetracker.css" />
   </head>
 
@@ -69,7 +68,10 @@
             </div>
           </div>
         </div>
-        <div id="modal" class="modal">
+      </div>
+
+      <div class="content">
+        <div id="modal" class="modal" style="display: none">
           <div class="modal-content">
             <div class="crt-1">
               <p>Create New Project</p>
@@ -87,23 +89,22 @@
               />
             </div>
             <div class="submit-div">
-              <button class="cls-new-prj">CLOSE</button>
-              <button class="crt-new-prj">CREATE</button>
+              <button class="cls-new-prj">CLOSE</button
+              ><button class="crt-new-prj">CREATE</button>
             </div>
           </div>
         </div>
+        
+        <div id="week" style="display: none;">
+          <div id="a1">
+            <p>This Week</p>
+            <p>Week Total : 00:00:00</p>
+          </div>
+
+          <div id="append"></div>
+        </div>
       </div>
     </div>
-
-    <!------------------- time tracket bottom part  ------------------>
-
-    <!-- <div class="week">
-        <div class="thisweek">
-            <p>This week</p>
-            <p>Week total: 00:00:00</p>
-        </div>
-        </div> -->
   </body>
 </html>
-<script src="./script/navbar.js" type="module"></script>
 <script src="./script/timetracker.js"></script>

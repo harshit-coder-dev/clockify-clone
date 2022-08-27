@@ -51,7 +51,7 @@
   height: 25px;
   margin: auto;
   position: relative;
-  top: -19%;
+  top: -32%;
 }
 .project p {
   color: #03a9f4;
@@ -66,7 +66,7 @@
   height: 25px;
   border: none;
   position: relative;
-  top: 30%;
+  top: 25%;
   left: 100%;
 }
 .dollar p {
@@ -129,96 +129,135 @@
 }
 
 
+/* ---------------------modal----------------- */
 
-.thisweek {
-  width: 87%;
-  height: 9vh;
-  display: flex;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 30%;
-  left: 12%;
-  box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
-  padding-top: 6px;
-  background: #e4eaee;
-}
 
-/* -----------------details--------------------- */
-.details {
-  width: 79%;
-  height: 100px;
-  display: flex;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 41.5%;
-  left: 20%;
-  padding-top: 20px;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 5px 1px,
-    rgba(9, 30, 66, 0.25) 0px 10px 1px 1px;
-}
-.details .name {
-  padding-top: 13px;
-}
-.details .name #desc {
-  height: 28px;
-  width: 200px;
-  padding-left: 20px;
-  font-size: medium;
-  color: #03a9f4;
-  border: none;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 300px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.details .project {
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  height: 150px;
+  width: 40%;
+}
+.crt-1 {
   display: flex;
-  width: 100px;
   justify-content: space-between;
-  padding-top: 17px;
-  border: none;
 }
-.details .p {
-  color: #03a9f4;
-  font-size: 20px;
-  font-weight: bold;
+
+.crt-1+div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
-.details .dollar p {
-  width: 80px;
-  height: 80px;
-  font-size: 40px;
-  font-weight: 500;
-  border: 1px solid black;
-  padding-top: 11px;
-  border: none;
-  color: rgb(153, 153, 153);
+
+.crt-1+div>input {
+  border: 0.5px solid gainsboro;
+  width: 45%;
+  height: 30px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.submit-div {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+
+}
+
+.crt-new-prj {
+  background-color: #03a9f4;
+  color: white;
+  border: 0.5px solid gainsboro;
+  width: 70px;
+  height: 30px;
   cursor: pointer;
 }
 
-.details .tag {
-  width: 38px;
-  padding-top: 8px;
-  border: none;
+.cls-new-prj {
+  background-color: white;
+  color: #03a9f4;
+  border: 0.5px solid gainsboro;
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
 }
-.details .calender {
-  width: 38px;
-  padding-top: 8px;
-  border: none;
+
+.close-modal {
+  color: #aaaaaa;
+  font-weight: bold;
+  width: 15px;
+  text-align: center;
 }
-.details .time {
-  padding-top: 16px;
+
+.close-modal:hover {
+  background-color: #000;
+  color: gainsboro;
 }
-.details .time #counttime {
-  height: 40px;
-  width: 80px;
-  font-size: 26px;
-  border: none;
+
+.close-modal,
+.close-modal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0.5px solid gainsboro;
+};
+
+#week{
+  width: 80%;
+  height: 10vh;
 }
-.details .play {
-  width: 30px;
-  padding-top: 8px;
-  border: none;
+#a1{
+  display: flex;
+  justify-content: space-between;
+  width: 87%;
+  position: absolute;
+  left: 10.5%;
+  top: 28%;
+  border: 1px solid;
 }
-.details .menubtn {
-  width: 13px;
-  height: 50px;
-  padding-top: 8px;
-  border: none;
+#append{
+  width: 87%;
+  position: absolute;
+  left: 10.5%;
+  border: 1px solid black;
+  top: 43%;
+
+}
+.div{
+  display: flex;
+  gap: 30px;
+}
+.div1{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items:center ;
+}
+.div2{
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  align-items:center ;
+}
+.div1 input{
+  width: 63%;
+  padding: 1rem;
+  outline: none;
+  border: transparent;
 }
