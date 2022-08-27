@@ -70,7 +70,7 @@ let navegabar = ()=>{
 let SideBar = ()=>{
     return `<div class="one-div-flex">
     <div class="icon"><img src="https://app.clockify.me/assets/nav-icons/time-tracker.svg" alt=""></i></div>
-    <div class="hide-show"><a href="">TIME TRACKER</a></div>
+    <div class="hide-show"><a href="timetracker.html">TIME TRACKER</a></div>
     <div class="hide" class="hide-show"><i class="fa-solid fa-grip-vertical"></i></div>
 </div>
 <div class="one-div-flex">

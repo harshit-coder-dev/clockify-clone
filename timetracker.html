@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Time-tracker • Clockify</title>
+    <link rel="icon" href="https://clockify.me/assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./style/timetracker.css" />
+    <link rel="stylesheet" href="./style/navbar.css">
+  </head>
+
+  <body>
+    <div id="navbar"></div>
+
+    <div id="box">
+      <!-- sidebar------------------------------- -->
+      <div id="sidebar"></div>
+
+      <div id="main">
+        <div class="addproject">
+          <div class="form">
+            <input
+              type="text"
+              placeholder="What are you working on?"
+              id="query"
+            />
+          </div>
+          <div class="ram">
+            <div class="project">
+              <img
+                src="https://app.clockify.me/assets/ui-icons/plus-blue-req.svg"
+                alt=""
+              />
+              <p>Project</p>
+            </div>
+            <div class="tag">
+              <img
+                src="https://app.clockify.me/assets/nav-icons/tags.svg"
+                alt=""
+                class="tag"
+              />
+            </div>
+            <div class="dollar">
+              <p>$</p>
+            </div>
+            <div class="timer" id="timer"><p>00:00:00</p></div>
+            <div class="start">
+              <button id="timer_start" class="toggle">Start</button>
+            </div>
+            <div class="twologo">
+              <img
+                src="https://app.clockify.me/assets/nav-icons/time-tracker.svg"
+                alt=""
+              />
+              <br />
+              <br />
+              <img
+                src="https://app.clockify.me/assets/ui-icons/list-blue.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div id="modal" class="modal" style="display: none">
+          <div class="modal-content">
+            <div class="crt-1">
+              <p>Create New Project</p>
+              <p class="close-modal" style="cursor: pointer">X</p>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="project-name"
+                placeholder="Enter Project Name"
+              /><input
+                type="text"
+                id="client-name"
+                placeholder="Enter Client Name"
+              />
+            </div>
+            <div class="submit-div">
+              <button class="cls-new-prj">CLOSE</button
+              ><button class="crt-new-prj">CREATE</button>
+            </div>
+          </div>
+        </div>
+        
+        <div id="week" style="display: none;">
+          <div id="a1">
+            <p>This Week</p>
+            <p>Week Total : 00:00:00</p>
+          </div>
+
+          <div id="append"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./script/timetracker.js"></script>
+<script src="./script/client.js" type="module"></script>

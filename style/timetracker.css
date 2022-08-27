@@ -1,0 +1,262 @@
+#main{
+  width: 80%;
+  margin: auto;
+}
+.addproject {
+  width: 80%;
+  height: 9vh;
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 20%;
+  box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
+  padding-top: 6px;
+}
+.form {
+  width: 55%;
+  height: 5vh;
+  margin: auto;
+}
+.addproject input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  position: relative;
+  top: -7%;
+  background: transparent;
+  outline: none;
+}
+.addproject input:hover {
+  border: 1px solid rgb(208, 192, 192);
+  transition: all 0.6s;
+}
+.ram {
+  display: flex;
+  width: 45%;
+  justify-content: space-evenly;
+}
+.project {
+  display: flex;
+  width: 16%;
+  justify-content: space-between;
+  padding-top: 17px;
+  border: none;
+  cursor: pointer;
+  gap: 16px;
+}
+.project img {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  position: relative;
+  top: -32%;
+}
+.project p {
+  color: #03a9f4;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  top: -24px;
+  left: -8px;
+}
+.tag img {
+  width: 25px;
+  height: 25px;
+  border: none;
+  position: relative;
+  top: 25%;
+  left: 100%;
+}
+.dollar p {
+  color: #03a9f4;
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  top: -15px;
+  left: 2px;
+}
+.dollar {
+  margin-left: 50px;
+}
+.timer p {
+  font-size: 23px;
+  border: none;
+  position: relative;
+  top: -17%;
+  left: 14%;
+}
+.toggle {
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.toggle.active {
+  transform: scale(0.9);
+}
+
+.start {
+  position: relative;
+  left: 4%;
+}
+#timer_start:hover {
+  background: #065f8f;
+  color: white;
+}
+
+#timer_start {
+  width: 200%;
+  height: 44px;
+  background: #03a9f4;
+  border: none;
+  position: relative;
+  top: 9%;
+}
+.twologo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: -13px;
+  top: -7px;
+  left: 32px;
+}
+.twologo img {
+  position: relative;
+  margin-bottom: -31px;
+  width: 16px;
+  top: 10px;
+  left: 2px;
+}
+
+
+/* ---------------------modal----------------- */
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 300px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  height: 150px;
+  width: 40%;
+}
+.crt-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crt-1+div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.crt-1+div>input {
+  border: 0.5px solid gainsboro;
+  width: 45%;
+  height: 30px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.submit-div {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+
+}
+
+.crt-new-prj {
+  background-color: #03a9f4;
+  color: white;
+  border: 0.5px solid gainsboro;
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.cls-new-prj {
+  background-color: white;
+  color: #03a9f4;
+  border: 0.5px solid gainsboro;
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close-modal {
+  color: #aaaaaa;
+  font-weight: bold;
+  width: 15px;
+  text-align: center;
+}
+
+.close-modal:hover {
+  background-color: #000;
+  color: gainsboro;
+}
+
+.close-modal,
+.close-modal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0.5px solid gainsboro;
+};
+
+#week{
+  width: 80%;
+  height: 10vh;
+}
+#a1{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  position: absolute;
+  left: 18%;
+  top: 28%;
+  border: 1px solid;
+}
+#append{
+  width: 80%;
+  position: absolute;
+  left: 18%;
+  border: 1px solid black;
+  top: 43%;
+
+}
+.div{
+  display: flex;
+  gap: 30px;
+}
+.div1{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items:center ;
+}
+.div2{
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  align-items:center ;
+}
+.div1 input{
+  width: 63%;
+  padding: 1rem;
+  outline: none;
+  border: transparent;
+}
