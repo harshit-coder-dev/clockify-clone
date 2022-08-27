@@ -1,0 +1,111 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f6f8;
+  font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+}
+  #main {
+    margin-top: 30px;
+    padding: 5px;
+  }
+  h2{
+      color:gray;
+      font-size: 28px;
+      font-weight: 400;
+  }
+  #search {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #search-left {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  
+  #search-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  
+  #show-active {
+    border: 1px solid rgb(117, 109, 109);
+    padding: 10px;
+    background-color: white;
+    font-size: 18px;
+    border-radius: 2px;
+  }
+  
+  input {
+    font-size: 18px;
+    padding: 14px;
+    border-radius: 2px;
+    border: 0.5px solid gray;
+    width: 200px;
+  }
+  
+  #add {
+    font-size: 18px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #58c6f8;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  #name {
+    margin-top: 30px;
+    height: 45px;
+    background-color: var(--secondary);
+    display: flex;
+    gap: 400px;
+    align-items: center;
+    border: 1px solid lightgray;
+    color: rgb(180, 176, 176);
+  }
+  
+  p {
+    margin-left: 10px;
+  }
+  
+  .show-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border: 1px solid lightgray;
+    border-top: 0;
+    background-color: white;
+    padding: 10px 0 10px 0;
+  }
+  
+  .right-div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .right-div > div {
+    border-left: 1px dotted gray;
+  }
+  
+  .right-div > div > img {
+    margin-left: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  

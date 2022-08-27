@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clockify</title>
+    <link rel="icon" href="https://clockify.me/assets/images/favicon.ico">
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        #main{
+            text-align: center;
+        }
+        #avi-top{
+            display:flex;
+            justify-content: space-around;
+        }
+        
+        
+        
+        #avi_top{
+            display:flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom:100px;
+            margin-left: 20px;
+            
+            
+        }
+        
+        #sp{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        button div{
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
+            width:100%;
+            
+        }
+        
+        #avi_login{
+            
+            padding:30px 40px;
+            border-radius: 10px;
+            margin:auto;
+            margin-bottom:100px;
+            display: grid;
+            gap:15px;
+            width:300px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #fp{
+            color:#03A9F4;
+        }
+        #log{
+            background-color:#03A9F4;
+            color:white;
+            border:transparent;
+            height:50px;
+            border-radius: 5px;
+        }
+        #log:hover{
+            cursor: pointer;
+        }
+        #google{
+            background-color: white;
+            color:black;
+            text-align: center;
+            
+            height:50px;
+        }
+        
+        #google:hover{
+            background-color: rgb(242, 236, 236);
+            color:black;
+        }
+        #email,#pass{
+            height:30px;
+        }
+        #lang{
+            margin:auto;
+            
+            width: 90px;
+        }
+        
+        select{
+            border:transparent;
+        }
+        #right{
+            background-color: #434FB5;
+            text-align: center;
+            color:white;
+            
+            margin-left:20px;
+        }
+        h3{
+            width:70%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        #right>img{
+            margin-left: 10%;
+        }
+        #right>button:nth-child(4){
+            margin-bottom: 20px;
+            height:40px;
+            background-color: #333333;
+            color:white;
+            border: transparent;
+        }
+        #new{
+            margin-top:10px;
+        }
+        #na{
+            color: #999999;
+        }
+        #logbtn{
+            background-color: white;
+            border: transparent;
+        }
+        input{
+            padding-left: 10px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="avi-top">
+            <img src="https://app.clockify.me/assets/logo.svg" alt="error">
+            <button id="logbtn"><a href="login.html">Log In</a></button>
+        </div>
+        <div>
+            <h1>Get started with Clockify</h1>
+            <h3>Create a free account to start tracking time and supercharge your productivity.</h3>
+            <p>No credit card required · Unsubscribe at any time</p>
+            <div id="avi_login">
+                <h2>Sign up</h2>
+                <input type="email" placeholder="Enter Email" id="email">
+                <input type="password" placeholder="Choose Password" id="pass">
+                <span id="sp"><p><input type="checkbox">I agree to the <a href="#" id="fp">Terms of Use</a></p></span>
+                <button id="log" onclick="myFunction()">CREATE FREE ACCOUNT</button>
+                <hr>
+                <button id="google">
+                    <div>
+                        <img src="https://app.clockify.me/assets/ui-icons/icon-google.svg"  alt="Error">
+                        <p>Continue with Google</p>
+                    </div>
+                </button>    
+            </div>
+            <div id="lang">
+                <select name="" id="">
+                    <option value="English">English</option>
+                    <option value="Francais">Francais</option>
+                    <option value="Espanol">Espanol</option>
+                    <option value="Portugues">Portugues</option>
+                    <option value="Deutsch">Deutsch</option>
+                    <option value="pyccknn">pyccknn</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    //https://nameless-earth-14050.herokuapp.com/api/signup
+
+    let signupArr = JSON.parse(localStorage.getItem("signupKey")) || [];
+    function myFunction(event) {
+     
+
+    let signupObj = {
+      
+      oEmail: document.querySelector("#email").value,
+      
+      oPassword: document.querySelector("#pass").value,
+    };
+
+    if (
+      signupObj.oEmail == "" ||
+      
+      signupObj.oPassword == ""
+    ) {
+      alert("Please Enter Your Details");
+    } else {
+      if (checkEmail(signupObj.oEmail) === true) {
+        signupArr.push(signupObj);
+        localStorage.setItem("signupKey", JSON.stringify(signupArr));
+        alert("Account Created Successfully, Click On Log In");
+      }
+    }
+  }
+
+  /*Email validation check*/
+
+  function checkEmail(oEmail) {
+    let filtered = signupArr.filter(function (el) {
+      return oEmail === el.oEmail;
+    });
+    //console.log(filtered);
+    if (filtered.length > 0) {
+      alert("Account Already Exists Click On Log In");
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+
+</script>
