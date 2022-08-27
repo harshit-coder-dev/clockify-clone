@@ -6,6 +6,12 @@
 .darkTheme {
   --primary: black;
   --secondary: black;
+  background-color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  text-align: left;
 }
 
 body {

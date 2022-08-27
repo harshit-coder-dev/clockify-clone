@@ -226,16 +226,16 @@
   justify-content: space-between;
   width: 80%;
   position: absolute;
-  left: 18%;
-  top: 28%;
+  left: 17%;
+  top: 34%;
   border: 1px solid;
 }
 #append{
   width: 80%;
   position: absolute;
-  left: 18%;
+  left: 17%;
   border: 1px solid black;
-  top: 43%;
+  top: 45%;
 
 }
 .div{
