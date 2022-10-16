@@ -15,6 +15,8 @@ Team :
 3.Kishore J
 <h1></h1>
 4.Akshay kaushik
+<h1></h1>
+5.Manoj Kumar
 
 
 <h1 align="center">Acknowledgements</h1>
