@@ -4,7 +4,7 @@
 <h1 align="center">Clockify</h1>
 <h3 align="center">A project tracking website</h3>
 <h1></h1>
-We Craete A clone project of time tracker website called https://clockify.me/
+We create a clone project of time tracker website called https://clockify.me/
 <h1></h1>
 Team :
 <h1></h1>
