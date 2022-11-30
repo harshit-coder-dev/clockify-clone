@@ -14,7 +14,7 @@ Team :
 <h1></h1>
 3.Kishore J
 <h1></h1>
-4.Akshay kaushik
+4.Avinash kaushik
 <h1></h1>
 5.Manoj Kumar
 
